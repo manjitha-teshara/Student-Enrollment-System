@@ -90,9 +90,9 @@ public class UndergraduateStudent extends javax.swing.JFrame {
         jLabel23 = new javax.swing.JLabel();
         passwordtxt = new javax.swing.JPasswordField();
         jLabel24 = new javax.swing.JLabel();
-        facultyIdtxt = new javax.swing.JTextField();
         jLabel25 = new javax.swing.JLabel();
         courseIdtxt = new javax.swing.JTextField();
+        facultyIdtxt = new javax.swing.JComboBox<>();
         jPanel5 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -287,12 +287,14 @@ public class UndergraduateStudent extends javax.swing.JFrame {
         jLabel24.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel24.setText("Faculty Id");
         jPanel1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 250, -1, 30));
-        jPanel1.add(facultyIdtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 250, 100, -1));
 
         jLabel25.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel25.setText("Course Id");
         jPanel1.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 280, -1, 30));
         jPanel1.add(courseIdtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 280, 100, -1));
+
+        facultyIdtxt.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel1.add(facultyIdtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 250, 100, -1));
 
         jTabbedPane1.addTab("Undergaduate", jPanel1);
 
@@ -378,7 +380,7 @@ public class UndergraduateStudent extends javax.swing.JFrame {
         String engGrade=engGradetxt.getText();
         String isislandRank=islandRanktxt.getText();
         String zScore=zScoretxt.getText();
-        String facultyId=facultyIdtxt.getText();
+        String facultyId=facultyIdtxt.getSelectedItem().toString();
         String courseId=courseIdtxt.getText();
         String password=passwordtxt.getText();
         UndergraduateStudentModel undergraduateStudentModel=new UndergraduateStudentModel(nameWithIntials, userName, regNo, indexNo, admission, email, mobile, nic, address, subName1, subGrade1, subName2, subGrade1, subName3, subGrade1, engGrade, ABORT, Double.NaN, facultyId, courseId, password);
@@ -435,7 +437,7 @@ public class UndergraduateStudent extends javax.swing.JFrame {
         String engGrade=engGradetxt.getText();
         String isislandRank=islandRanktxt.getText();
         String zScore=zScoretxt.getText();
-        String facultyId=facultyIdtxt.getText();
+        String facultyId=facultyIdtxt.getSelectedItem().toString();
         String courseId=courseIdtxt.getText();
         String password=passwordtxt.getText();
 
@@ -487,7 +489,7 @@ public class UndergraduateStudent extends javax.swing.JFrame {
                 engGradetxt.setText(undergraduateStudentModel.getEngGrade());
                 islandRanktxt.setText(Integer.toString(undergraduateStudentModel.getIslandRank()));
                 zScoretxt.setText(Double.toString(undergraduateStudentModel.getzScore()));
-                facultyIdtxt.setText(undergraduateStudentModel.getFacultyId());
+                facultyIdtxt.setSelectedItem(undergraduateStudentModel.getFacultyId());
                 courseIdtxt.setText(undergraduateStudentModel.getCourseId());
 
             } else {
@@ -550,7 +552,7 @@ public class UndergraduateStudent extends javax.swing.JFrame {
     private javax.swing.JButton editbtn;
     private javax.swing.JTextField emailtxt;
     private javax.swing.JTextField engGradetxt;
-    private javax.swing.JTextField facultyIdtxt;
+    private javax.swing.JComboBox<String> facultyIdtxt;
     private javax.swing.JTextField indexNotxt;
     private javax.swing.JTextField islandRanktxt;
     private javax.swing.JButton jButton1;
