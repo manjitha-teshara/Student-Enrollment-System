@@ -34,7 +34,8 @@ public class Dashborad extends javax.swing.JFrame {
         courseDetailbtn = new javax.swing.JButton();
         enrollCoursebtn = new javax.swing.JButton();
         registerbtn = new javax.swing.JButton();
-        paymentbtn = new javax.swing.JButton();
+        facultybtn = new javax.swing.JButton();
+        paymentbtn1 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -93,14 +94,23 @@ public class Dashborad extends javax.swing.JFrame {
         });
         jPanel2.add(registerbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(631, 204, 227, 71));
 
-        paymentbtn.setBackground(new java.awt.Color(61, 196, 226));
-        paymentbtn.setText("Payment");
-        paymentbtn.addActionListener(new java.awt.event.ActionListener() {
+        facultybtn.setBackground(new java.awt.Color(61, 196, 226));
+        facultybtn.setText("Faculty");
+        facultybtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                paymentbtnActionPerformed(evt);
+                facultybtnActionPerformed(evt);
             }
         });
-        jPanel2.add(paymentbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 200, 227, 71));
+        jPanel2.add(facultybtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 100, 227, 71));
+
+        paymentbtn1.setBackground(new java.awt.Color(61, 196, 226));
+        paymentbtn1.setText("Payment");
+        paymentbtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                paymentbtn1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(paymentbtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 200, 227, 71));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 197, 870, 350));
 
@@ -172,11 +182,15 @@ public class Dashborad extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_registerbtnActionPerformed
 
-    private void paymentbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paymentbtnActionPerformed
-        Payment payment=new Payment();
-        payment.setVisible(true);
+    private void facultybtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_facultybtnActionPerformed
+        Faculty faculty=new Faculty();
+        faculty.setVisible(true);
         this.dispose();;
-    }//GEN-LAST:event_paymentbtnActionPerformed
+    }//GEN-LAST:event_facultybtnActionPerformed
+
+    private void paymentbtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paymentbtn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_paymentbtn1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -217,12 +231,13 @@ public class Dashborad extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton courseDetailbtn;
     private javax.swing.JButton enrollCoursebtn;
+    private javax.swing.JButton facultybtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JButton paymentbtn;
+    private javax.swing.JButton paymentbtn1;
     private javax.swing.JButton registerbtn;
     private javax.swing.JButton semesterDetail;
     private javax.swing.JButton subjectDetailbtn;
