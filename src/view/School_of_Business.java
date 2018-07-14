@@ -125,8 +125,10 @@ public class School_of_Business extends javax.swing.JFrame {
         });
         jPanel2.add(bmInAccount, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 270, 500, -1));
 
+        jButton8.setBackground(new java.awt.Color(49, 144, 176));
+        jButton8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton8.setText("Back");
-        jPanel2.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 550, -1, -1));
+        jPanel2.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 550, 100, -1));
 
         jPanel5.setBackground(new java.awt.Color(141, 199, 63));
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Undergraduate Degree Businees", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 18), new java.awt.Color(25, 88, 157))); // NOI18N

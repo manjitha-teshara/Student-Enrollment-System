@@ -108,12 +108,12 @@ public class Payment extends javax.swing.JFrame {
                 submitbtnActionPerformed(evt);
             }
         });
-        jPanel7.add(submitbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 390, -1, -1));
+        jPanel7.add(submitbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 390, 100, -1));
 
         backbtn.setBackground(new java.awt.Color(49, 144, 176));
         backbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         backbtn.setText("Back");
-        jPanel7.add(backbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 390, -1, -1));
+        jPanel7.add(backbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 390, 100, -1));
 
         canelbtn.setBackground(new java.awt.Color(49, 144, 176));
         canelbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -123,21 +123,27 @@ public class Payment extends javax.swing.JFrame {
                 canelbtnActionPerformed(evt);
             }
         });
-        jPanel7.add(canelbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 390, -1, -1));
+        jPanel7.add(canelbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 390, 100, -1));
 
+        Searchbtn.setBackground(new java.awt.Color(49, 144, 176));
+        Searchbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Searchbtn.setText("Search");
         Searchbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SearchbtnActionPerformed(evt);
             }
         });
-        jPanel7.add(Searchbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 60, -1, -1));
+        jPanel7.add(Searchbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 60, 100, -1));
 
+        deletebtn.setBackground(new java.awt.Color(49, 144, 176));
+        deletebtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         deletebtn.setText("Delete");
-        jPanel7.add(deletebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 390, -1, -1));
+        jPanel7.add(deletebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 390, 100, -1));
 
+        editbtn.setBackground(new java.awt.Color(49, 144, 176));
+        editbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         editbtn.setText("Edit");
-        jPanel7.add(editbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 390, -1, -1));
+        jPanel7.add(editbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 390, 100, -1));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);

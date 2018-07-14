@@ -56,7 +56,7 @@ public class Dashborad extends javax.swing.JFrame {
                 subjectDetailbtnActionPerformed(evt);
             }
         });
-        jPanel2.add(subjectDetailbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(631, 13, 227, 71));
+        jPanel2.add(subjectDetailbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 50, 200, 200));
 
         semesterDetail.setBackground(new java.awt.Color(61, 196, 226));
         semesterDetail.setText("Semester Detail");
@@ -65,16 +65,17 @@ public class Dashborad extends javax.swing.JFrame {
                 semesterDetailActionPerformed(evt);
             }
         });
-        jPanel2.add(semesterDetail, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, 227, 71));
+        jPanel2.add(semesterDetail, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 50, 200, 200));
 
         courseDetailbtn.setBackground(new java.awt.Color(61, 196, 226));
         courseDetailbtn.setText("Course Detail");
+        courseDetailbtn.setMaximumSize(new java.awt.Dimension(100, 100));
         courseDetailbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 courseDetailbtnActionPerformed(evt);
             }
         });
-        jPanel2.add(courseDetailbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 13, 227, 71));
+        jPanel2.add(courseDetailbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, 200, 200));
 
         enrollCoursebtn.setBackground(new java.awt.Color(61, 196, 226));
         enrollCoursebtn.setText("Enroll Courses");
@@ -83,7 +84,7 @@ public class Dashborad extends javax.swing.JFrame {
                 enrollCoursebtnActionPerformed(evt);
             }
         });
-        jPanel2.add(enrollCoursebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 204, 227, 71));
+        jPanel2.add(enrollCoursebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 200, 200));
 
         registerbtn.setBackground(new java.awt.Color(61, 196, 226));
         registerbtn.setText("Register");
@@ -92,7 +93,7 @@ public class Dashborad extends javax.swing.JFrame {
                 registerbtnActionPerformed(evt);
             }
         });
-        jPanel2.add(registerbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(631, 204, 227, 71));
+        jPanel2.add(registerbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 340, 200, 200));
 
         facultybtn.setBackground(new java.awt.Color(61, 196, 226));
         facultybtn.setText("Faculty");
@@ -101,7 +102,7 @@ public class Dashborad extends javax.swing.JFrame {
                 facultybtnActionPerformed(evt);
             }
         });
-        jPanel2.add(facultybtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 100, 227, 71));
+        jPanel2.add(facultybtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 50, 200, 200));
 
         paymentbtn1.setBackground(new java.awt.Color(61, 196, 226));
         paymentbtn1.setText("Payment");
@@ -110,9 +111,9 @@ public class Dashborad extends javax.swing.JFrame {
                 paymentbtn1ActionPerformed(evt);
             }
         });
-        jPanel2.add(paymentbtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 200, 227, 71));
+        jPanel2.add(paymentbtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 340, 200, 200));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 197, 870, 350));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 197, 1370, 600));
 
         jPanel3.setBackground(new java.awt.Color(25, 88, 157));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -133,20 +134,21 @@ public class Dashborad extends javax.swing.JFrame {
 
         jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 22, 870, 180));
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 22, 1370, 180));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 895, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1395, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 570, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 812, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -189,7 +191,9 @@ public class Dashborad extends javax.swing.JFrame {
     }//GEN-LAST:event_facultybtnActionPerformed
 
     private void paymentbtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paymentbtn1ActionPerformed
-        // TODO add your handling code here:
+       Payment payment=new Payment();
+       payment.setVisible(true);
+       this.dispose();
     }//GEN-LAST:event_paymentbtn1ActionPerformed
 
     /**

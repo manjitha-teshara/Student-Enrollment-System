@@ -118,6 +118,10 @@ public class StudentReg extends javax.swing.JFrame {
         jPanel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jTabbedPane1.setForeground(new java.awt.Color(25, 88, 157));
+        jTabbedPane1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+
+        jPanel1.setBackground(new java.awt.Color(141, 199, 63));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -206,16 +210,20 @@ public class StudentReg extends javax.swing.JFrame {
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 22, 30, 310));
 
+        jButton6.setBackground(new java.awt.Color(49, 144, 176));
+        jButton6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton6.setText("Submit");
-        jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 320, -1, -1));
+        jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 320, 100, -1));
 
+        jButton7.setBackground(new java.awt.Color(49, 144, 176));
+        jButton7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton7.setText("Cancel");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 320, -1, -1));
+        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 320, 100, -1));
 
         jLabel25.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel25.setText("Subject Name");
@@ -223,6 +231,7 @@ public class StudentReg extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Undergaduate", jPanel1);
 
+        jPanel2.setBackground(new java.awt.Color(141, 199, 63));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -298,11 +307,15 @@ public class StudentReg extends javax.swing.JFrame {
         jPanel2.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 110, -1, 30));
         jPanel2.add(jTextField27, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 110, 100, -1));
 
+        jButton8.setBackground(new java.awt.Color(49, 144, 176));
+        jButton8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton8.setText("Submit");
-        jPanel2.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 330, -1, -1));
+        jPanel2.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 330, 100, -1));
 
+        jButton9.setBackground(new java.awt.Color(49, 144, 176));
+        jButton9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton9.setText("Cancel");
-        jPanel2.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 330, -1, -1));
+        jPanel2.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 330, 100, -1));
 
         jTabbedPane1.addTab("Postgraduate", jPanel2);
 

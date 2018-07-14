@@ -124,6 +124,7 @@ public class SelectDegreeProgramme1 extends javax.swing.JFrame {
         });
         jPanel2.add(School_of_Computingpostbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 330, 500, -1));
 
+        backbtn.setBackground(new java.awt.Color(49, 144, 176));
         backbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         backbtn.setText("Back");
         backbtn.addActionListener(new java.awt.event.ActionListener() {
@@ -131,7 +132,7 @@ public class SelectDegreeProgramme1 extends javax.swing.JFrame {
                 backbtnActionPerformed(evt);
             }
         });
-        jPanel2.add(backbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 390, -1, -1));
+        jPanel2.add(backbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 390, 100, -1));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 147, 900, 580));
 

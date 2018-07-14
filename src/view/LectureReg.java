@@ -125,7 +125,7 @@ public class LectureReg extends javax.swing.JFrame {
                 editbtnActionPerformed(evt);
             }
         });
-        jPanel7.add(editbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 400, -1, -1));
+        jPanel7.add(editbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 400, 100, -1));
 
         cancelbtn.setBackground(new java.awt.Color(49, 144, 176));
         cancelbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -135,7 +135,7 @@ public class LectureReg extends javax.swing.JFrame {
                 cancelbtnActionPerformed(evt);
             }
         });
-        jPanel7.add(cancelbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 400, -1, -1));
+        jPanel7.add(cancelbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 400, 100, -1));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel9.setText("Name with Initials");
@@ -155,7 +155,7 @@ public class LectureReg extends javax.swing.JFrame {
                 searchbtn1ActionPerformed(evt);
             }
         });
-        jPanel7.add(searchbtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 30, -1, -1));
+        jPanel7.add(searchbtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 30, 100, -1));
 
         deletebtn1.setBackground(new java.awt.Color(49, 144, 176));
         deletebtn1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -165,15 +165,17 @@ public class LectureReg extends javax.swing.JFrame {
                 deletebtn1ActionPerformed(evt);
             }
         });
-        jPanel7.add(deletebtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 400, -1, -1));
+        jPanel7.add(deletebtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 400, 100, -1));
 
+        submitbtn.setBackground(new java.awt.Color(49, 144, 176));
+        submitbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         submitbtn.setText("Submit");
         submitbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 submitbtnActionPerformed(evt);
             }
         });
-        jPanel7.add(submitbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 400, -1, -1));
+        jPanel7.add(submitbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 400, 100, -1));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);

@@ -102,6 +102,8 @@ public class School_of_Computing extends javax.swing.JFrame {
         });
         jPanel2.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 230, 500, -1));
 
+        jButton8.setBackground(new java.awt.Color(49, 144, 176));
+        jButton8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton8.setText("Back");
         jPanel2.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 500, -1, -1));
 

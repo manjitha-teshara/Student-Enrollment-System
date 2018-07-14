@@ -128,7 +128,7 @@ public class InstrocterReg extends javax.swing.JFrame {
                 cancelbtnActionPerformed(evt);
             }
         });
-        jPanel4.add(cancelbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 400, -1, -1));
+        jPanel4.add(cancelbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 390, 100, -1));
 
         searchbtn1.setBackground(new java.awt.Color(49, 144, 176));
         searchbtn1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -138,7 +138,7 @@ public class InstrocterReg extends javax.swing.JFrame {
                 searchbtn1ActionPerformed(evt);
             }
         });
-        jPanel4.add(searchbtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 50, -1, -1));
+        jPanel4.add(searchbtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 50, 100, -1));
 
         deletebtn1.setBackground(new java.awt.Color(49, 144, 176));
         deletebtn1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -148,7 +148,7 @@ public class InstrocterReg extends javax.swing.JFrame {
                 deletebtn1ActionPerformed(evt);
             }
         });
-        jPanel4.add(deletebtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 370, -1, -1));
+        jPanel4.add(deletebtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 390, 100, -1));
 
         editbtn.setBackground(new java.awt.Color(49, 144, 176));
         editbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -158,15 +158,17 @@ public class InstrocterReg extends javax.swing.JFrame {
                 editbtnActionPerformed(evt);
             }
         });
-        jPanel4.add(editbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 370, -1, -1));
+        jPanel4.add(editbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 390, 100, -1));
 
+        submitbtn1.setBackground(new java.awt.Color(49, 144, 176));
+        submitbtn1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         submitbtn1.setText("Submit");
         submitbtn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 submitbtn1ActionPerformed(evt);
             }
         });
-        jPanel4.add(submitbtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 390, -1, -1));
+        jPanel4.add(submitbtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 390, 100, -1));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel9.setText("Address");

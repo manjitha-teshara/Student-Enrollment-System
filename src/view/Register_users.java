@@ -29,11 +29,11 @@ public class Register_users extends javax.swing.JFrame {
 
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
-        jButton7 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         instroucterbtn = new javax.swing.JButton();
         lecturebtn = new javax.swing.JButton();
         studentbtn = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
 
@@ -46,40 +46,46 @@ public class Register_users extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(141, 199, 63));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton7.setText("Back");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
-            }
-        });
-        jPanel4.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 400, -1, -1));
-
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Register"));
+        jPanel1.setBackground(new java.awt.Color(141, 199, 63));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Register", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 18), new java.awt.Color(25, 88, 157))); // NOI18N
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        instroucterbtn.setBackground(new java.awt.Color(49, 144, 176));
         instroucterbtn.setText("Instrounters");
         instroucterbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 instroucterbtnActionPerformed(evt);
             }
         });
-        jPanel1.add(instroucterbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 70, 144, 144));
+        jPanel1.add(instroucterbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 70, 200, 200));
 
+        lecturebtn.setBackground(new java.awt.Color(49, 144, 176));
         lecturebtn.setText("Lectures");
         lecturebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 lecturebtnActionPerformed(evt);
             }
         });
-        jPanel1.add(lecturebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 70, 144, 144));
+        jPanel1.add(lecturebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 70, 200, 200));
 
+        studentbtn.setBackground(new java.awt.Color(49, 144, 176));
         studentbtn.setText("Student");
         studentbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 studentbtnActionPerformed(evt);
             }
         });
-        jPanel1.add(studentbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 70, 144, 144));
+        jPanel1.add(studentbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 70, 200, 200));
+
+        jButton7.setBackground(new java.awt.Color(49, 144, 176));
+        jButton7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton7.setText("Back");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 380, 100, -1));
 
         jPanel4.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 820, 410));
 

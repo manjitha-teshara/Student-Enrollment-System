@@ -90,7 +90,7 @@ public class Course_view extends javax.swing.JFrame {
                 searchbtnActionPerformed(evt);
             }
         });
-        jPanel7.add(searchbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 50, -1, -1));
+        jPanel7.add(searchbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 50, 100, -1));
 
         jButton2.setBackground(new java.awt.Color(49, 144, 176));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -100,15 +100,17 @@ public class Course_view extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel7.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 390, -1, -1));
+        jPanel7.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 390, 100, -1));
 
+        addCoursebtn.setBackground(new java.awt.Color(49, 144, 176));
+        addCoursebtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         addCoursebtn.setText("Add Courses");
         addCoursebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addCoursebtnActionPerformed(evt);
             }
         });
-        jPanel7.add(addCoursebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 390, -1, -1));
+        jPanel7.add(addCoursebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 390, 130, -1));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
