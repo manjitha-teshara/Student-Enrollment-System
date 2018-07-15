@@ -66,6 +66,7 @@
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                     <TitledBorder title="Login">
                       <Font PropertyName="font" name="Tahoma" size="14" style="1"/>
+                      <Color PropertyName="color" blue="9d" green="58" red="19" type="rgb"/>
                     </TitledBorder>
                   </Border>
                 </Property>
@@ -85,6 +86,9 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="b0" green="90" red="31" type="rgb"/>
                     </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/view/instroucterv1.png"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Instrounters"/>
                   </Properties>
                   <Constraints>
@@ -98,6 +102,9 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="b0" green="90" red="31" type="rgb"/>
                     </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/view/lecturev1.png"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Lectures"/>
                   </Properties>
                   <Constraints>
@@ -110,6 +117,9 @@
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="b0" green="90" red="31" type="rgb"/>
+                    </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/view/studentv1.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Student"/>
                   </Properties>

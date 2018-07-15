@@ -47,18 +47,21 @@ public class Login_users extends javax.swing.JFrame {
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(141, 199, 63));
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Login", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Login", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14), new java.awt.Color(25, 88, 157))); // NOI18N
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton6.setBackground(new java.awt.Color(49, 144, 176));
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/instroucterv1.png"))); // NOI18N
         jButton6.setText("Instrounters");
         jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 60, 200, 200));
 
         jButton5.setBackground(new java.awt.Color(49, 144, 176));
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lecturev1.png"))); // NOI18N
         jButton5.setText("Lectures");
         jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 60, 200, 200));
 
         jButton4.setBackground(new java.awt.Color(49, 144, 176));
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/studentv1.png"))); // NOI18N
         jButton4.setText("Student");
         jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 60, 200, 200));
 

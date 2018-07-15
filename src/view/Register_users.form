@@ -86,6 +86,9 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="b0" green="90" red="31" type="rgb"/>
                     </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/view/instroucterv1.png"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Instrounters"/>
                   </Properties>
                   <Events>
@@ -102,6 +105,9 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="b0" green="90" red="31" type="rgb"/>
                     </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="2" name="C:\Users\manji\OneDrive\Documents\lecturev1.png"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Lectures"/>
                   </Properties>
                   <Events>
@@ -117,6 +123,9 @@
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="b0" green="90" red="31" type="rgb"/>
+                    </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/view/studentv1.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Student"/>
                   </Properties>
