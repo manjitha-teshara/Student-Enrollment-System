@@ -26,13 +26,13 @@ public class UndergraduateStudentModel {
     String subName3;
     String subGrade3;
     String engGrade;
-    int islandRank;
-    Double zScore;
+    String islandRank;
+    String zScore;
     String facultyId;
     String courseId;
     String password;
 
-    public UndergraduateStudentModel(String nameWithIntials, String userName, String regNo, String indexNo, String admission, String email, String mobile, String nic, String address, String subName1, String subGrade1, String subName2, String subGrade2, String subName3, String subGrade3, String engGrade, int islandRank, Double zScore, String facultyId, String courseId, String password) {
+    public UndergraduateStudentModel(String nameWithIntials, String userName, String regNo, String indexNo, String admission, String email, String mobile, String nic, String address, String subName1, String subGrade1, String subName2, String subGrade2, String subName3, String subGrade3, String engGrade, String islandRank, String zScore, String facultyId, String courseId, String password) {
         this.nameWithIntials = nameWithIntials;
         this.userName = userName;
         this.regNo = regNo;
@@ -184,19 +184,19 @@ public class UndergraduateStudentModel {
         this.engGrade = engGrade;
     }
 
-    public int getIslandRank() {
+    public String getIslandRank() {
         return islandRank;
     }
 
-    public void setIslandRank(int islandRank) {
+    public void setIslandRank(String islandRank) {
         this.islandRank = islandRank;
     }
 
-    public Double getzScore() {
+    public String getzScore() {
         return zScore;
     }
 
-    public void setzScore(Double zScore) {
+    public void setzScore(String zScore) {
         this.zScore = zScore;
     }
 

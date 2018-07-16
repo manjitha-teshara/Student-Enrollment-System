@@ -21,7 +21,7 @@ import view.PostgraduateStudent;
 public class PostgraduateController {
     
     public static int addPostStudent(PostgraduateStudentModel postgraduateStudentModel) throws ClassNotFoundException, SQLException {
-        String sql = "Insert into postgraduatestudent INSERT INTO postgraduatestudent(nameWithIntials,userName,regNo,indexNo,admission,email,mobile,nic,address,insitute,qualificationType,qualification,facultyId,password,courseId) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        String sql = "INSERT INTO postgraduatestudent(nameWithIntials,userName,regNo,indexNo,admission,email,mobile,nic,address,insitute,qualificationType,qualification,facultyId,password,courseId) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         Connection conn = DBConnection.getDBConnection().getConnection();
         PreparedStatement stm = conn.prepareStatement(sql);
         stm.setObject(1, postgraduateStudentModel.getNameWithIntials());
@@ -37,8 +37,9 @@ public class PostgraduateController {
         stm.setObject(11, postgraduateStudentModel.getQualificationType());
         stm.setObject(12, postgraduateStudentModel.getQualification());
         stm.setObject(13, postgraduateStudentModel.getFacultyId());
-        stm.setObject(14, postgraduateStudentModel.getCourseId());
-        stm.setObject(15, postgraduateStudentModel.getPassword());
+        stm.setObject(14, postgraduateStudentModel.getPassword());
+        stm.setObject(15, postgraduateStudentModel.getCourseId());
+        
         return  stm.executeUpdate();
         
     }
@@ -73,7 +74,8 @@ public class PostgraduateController {
           stm.setObject(1, id);
           ResultSet rst=stm.executeQuery();
           if(rst.next()){
-              PostgraduateStudentModel postgraduateStudentModel=new PostgraduateStudentModel(rst.getString("nameWithIntials"),rst.getString("userName"),rst.getString("regNo"),rst.getString("indexNo"),rst.getString("admission"),rst.getString("email"),rst.getString("mobile"),rst.getString("nic"),rst.getString("address"),rst.getString("insitute"),rst.getString("qualificationType"),rst.getString("qualification"),rst.getString("facultyId"),rst.getString("courseId"),rst.getString("password"));
+              PostgraduateStudentModel postgraduateStudentModel=new PostgraduateStudentModel(rst.getString("nameWithIntials"),rst.getString("userName"),rst.getString("regNo"),rst.getString("indexNo"),rst.getString("admission"),rst.getString("email"),rst.getString("mobile"),rst.getString("nic"),rst.getString("address"),rst.getString("insitute"),rst.getString("qualificationType"),rst.getString("qualification"),rst.getString("facultyId"),rst.getString("password"),rst.getString("courseId"));
+              //System.out.print(postgraduateStudentModel.getFacultyId());
               return postgraduateStudentModel;
           }
           else{

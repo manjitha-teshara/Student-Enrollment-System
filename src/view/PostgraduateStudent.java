@@ -6,11 +6,13 @@
 package view;
 
 import controller.PostgraduateController;
+import controller.UndergraduateStudentController;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import model.PostgraduateStudentModel;
+import model.UndergraduateStudentModel;
 import other.IDGenerator;
 
 /**
@@ -159,21 +161,41 @@ public class PostgraduateStudent extends javax.swing.JFrame {
         searchbtn.setBackground(new java.awt.Color(49, 144, 176));
         searchbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         searchbtn.setText("Search");
+        searchbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchbtnActionPerformed(evt);
+            }
+        });
         jPanel2.add(searchbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 50, 80, -1));
 
         editbtn.setBackground(new java.awt.Color(49, 144, 176));
         editbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         editbtn.setText("Edit");
+        editbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editbtnActionPerformed(evt);
+            }
+        });
         jPanel2.add(editbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 340, 80, -1));
 
         datetebtn.setBackground(new java.awt.Color(49, 144, 176));
         datetebtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         datetebtn.setText("Delete");
+        datetebtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                datetebtnActionPerformed(evt);
+            }
+        });
         jPanel2.add(datetebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 340, 80, -1));
 
         submitbtn.setBackground(new java.awt.Color(49, 144, 176));
         submitbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         submitbtn.setText("Submit");
+        submitbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitbtnActionPerformed(evt);
+            }
+        });
         jPanel2.add(submitbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 340, 90, -1));
 
         cancelbtn.setBackground(new java.awt.Color(49, 144, 176));
@@ -253,6 +275,133 @@ public class PostgraduateStudent extends javax.swing.JFrame {
             dashborad.setVisible(true);
             this.dispose();  
     }//GEN-LAST:event_jLabel10MouseClicked
+
+    private void submitbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitbtnActionPerformed
+       
+        String nameWithInitials=nameWithIntialstxt.getText();
+        String userName=userNametxt.getText();
+        String regNo=regNotxt.getText();
+        String indexNo=indexNotxt.getText();
+        String email=emailtxt.getText();
+        String mobile=mobiletxt.getText();
+        String nic=nictxt.getText();
+        String address=addresstxt.getText();
+        String addmissionDate=addmissiontxt.getText();
+        String institute=insitutetxt.getText();
+        String qualificationType=qualificationTypetxt.getText();
+        String qualification=qualificationtxt1.getText();
+        String faculty=facultyIdtxt.getText();
+        String courseId=courseIdtxt.getText();
+        String password=passwordtxt.getText();
+        
+       PostgraduateStudentModel postgraduateStudentModel=new PostgraduateStudentModel(nameWithInitials, userName, regNo, indexNo, addmissionDate, email, mobile, nic, address, institute, qualificationType, qualification, faculty, courseId, password);
+       
+       //int res;
+       int res = 0;
+        try {
+            res = PostgraduateController.addPostStudent(postgraduateStudentModel);
+            if(res>0){
+           JOptionPane.showMessageDialog(this, "Added Success");
+       }
+        } 
+        catch (ClassNotFoundException ex) {
+            JOptionPane.showMessageDialog(this, "No Driver found");
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(this, ex.getMessage());
+
+        }
+       
+    }//GEN-LAST:event_submitbtnActionPerformed
+
+    private void datetebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_datetebtnActionPerformed
+      
+      String id=regNotxt.getText();
+        try {
+            int res=PostgraduateController.deletePostStudent(id);
+            if (res > 0) {
+                JOptionPane.showMessageDialog(this, "Delete Success ");
+            } else {
+                JOptionPane.showMessageDialog(this, "Delete Fail ");
+            } 
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(PostgraduateStudent.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(PostgraduateStudent.class.getName()).log(Level.SEVERE, null, ex);
+        }
+      
+      
+    }//GEN-LAST:event_datetebtnActionPerformed
+
+    private void editbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editbtnActionPerformed
+       
+       String nameWithInitials=nameWithIntialstxt.getText();
+        String userName=userNametxt.getText();
+        String regNo=regNotxt.getText();
+        String indexNo=indexNotxt.getText();
+        String email=emailtxt.getText();
+        String mobile=mobiletxt.getText();
+        String nic=nictxt.getText();
+        String address=addresstxt.getText();
+        String addmissionDate=addmissiontxt.getText();
+        String institute=insitutetxt.getText();
+        String qualificationType=qualificationTypetxt.getText();
+        String qualification=qualificationtxt1.getText();
+        String faculty=facultyIdtxt.getText();
+        String courseId=courseIdtxt.getText();
+        String password=passwordtxt.getText();
+        
+       PostgraduateStudentModel postgraduateStudentModel=new PostgraduateStudentModel(nameWithInitials, userName, regNo, indexNo, addmissionDate, email, mobile, nic, address, institute, qualificationType, qualification, faculty, courseId, password);
+       try{
+           int res=PostgraduateController.editPostStudent(postgraduateStudentModel);
+            if(res>0){
+                JOptionPane.showMessageDialog(this, "Update Success");
+            }
+            else{
+               JOptionPane.showMessageDialog(this, "Update Fail"); 
+            }
+           
+       } catch (ClassNotFoundException ex) {
+            Logger.getLogger(PostgraduateStudent.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(PostgraduateStudent.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_editbtnActionPerformed
+
+    private void searchbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchbtnActionPerformed
+       
+       
+       String id=regNotxt.getText();
+       try{
+       PostgraduateStudentModel postgraduateStudentModel=PostgraduateController.searchPostStudent(id);
+       if (postgraduateStudentModel != null) {
+                nameWithIntialstxt.setText(postgraduateStudentModel.getNameWithIntials());
+                userNametxt.setText(postgraduateStudentModel.getUserName());
+                regNotxt.setText(postgraduateStudentModel.getRegNo());
+                indexNotxt.setText(postgraduateStudentModel.getIndexNo());
+                emailtxt.setText(postgraduateStudentModel.getEmail());
+                mobiletxt.setText(postgraduateStudentModel.getMobile());
+                nictxt.setText(postgraduateStudentModel.getNic());
+                addresstxt.setText(postgraduateStudentModel.getAddress());
+                addmissiontxt.setText(postgraduateStudentModel.getAdmission());
+                insitutetxt.setText(postgraduateStudentModel.getInsitute());
+                qualificationTypetxt.setText(postgraduateStudentModel.getQualificationType());
+                qualificationtxt1.setText(postgraduateStudentModel.getQualification());
+                facultyIdtxt.setText(postgraduateStudentModel.getFacultyId());
+                courseIdtxt.setText(postgraduateStudentModel.getCourseId());
+                
+                
+                
+               
+            } else {
+                JOptionPane.showMessageDialog(this, "No Such Student ");
+            }
+       } catch (ClassNotFoundException ex) {
+            Logger.getLogger(PostgraduateStudent.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(PostgraduateStudent.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       
+    }//GEN-LAST:event_searchbtnActionPerformed
 
     /**
      * @param args the command line arguments

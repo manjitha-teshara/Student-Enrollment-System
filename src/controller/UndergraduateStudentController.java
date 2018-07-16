@@ -19,7 +19,7 @@ import model.UndergraduateStudentModel;
 public class UndergraduateStudentController {
     
     public static int addUnderStudent(UndergraduateStudentModel undergraduateStudentModel) throws ClassNotFoundException, SQLException {
-        String sql = "Insert into undergraduatestudent INSERT INTO postgraduatestudent(nameWithIntials,userName,regNo,indexNo,admission,email,mobile,nic,address,insitute,qualificationType,qualification,facultyId,courseId,password) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        String sql = "INSERT INTO postgraduatestudent(nameWithIntials,userName,regNo,indexNo,admission,email,mobile,nic,address,subName1,subGrade1,subName2,subGrade2,subName3,subGrade3,engGrade,islandRank,zScore,facultyId,password,courseId) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         Connection conn = DBConnection.getDBConnection().getConnection();
         PreparedStatement stm = conn.prepareStatement(sql);
         stm.setObject(1, undergraduateStudentModel.getNameWithIntials());
@@ -38,11 +38,11 @@ public class UndergraduateStudentController {
         stm.setObject(14, undergraduateStudentModel.getSubName3());
         stm.setObject(15, undergraduateStudentModel.getSubGrade3());
         stm.setObject(16, undergraduateStudentModel.getEngGrade());
-        stm.setObject(11, undergraduateStudentModel.getIslandRank());
-        stm.setObject(12, undergraduateStudentModel.getzScore());
-        stm.setObject(13, undergraduateStudentModel.getFacultyId());
-        stm.setObject(14, undergraduateStudentModel.getCourseId());
-        stm.setObject(15, undergraduateStudentModel.getPassword());
+        stm.setObject(17, undergraduateStudentModel.getIslandRank());
+        stm.setObject(18, undergraduateStudentModel.getzScore());
+        stm.setObject(19, undergraduateStudentModel.getFacultyId());
+        stm.setObject(20, undergraduateStudentModel.getPassword());
+        stm.setObject(21, undergraduateStudentModel.getCourseId());
         return  stm.executeUpdate();
         
     }
@@ -85,7 +85,7 @@ public class UndergraduateStudentController {
           stm.setObject(1, id);
           ResultSet rst=stm.executeQuery();
           if(rst.next()){
-              UndergraduateStudentModel undergraduateStudentModel=new UndergraduateStudentModel(rst.getString("nameWithIntials"),rst.getString("userName"),rst.getString("regNo"),rst.getString("indexNo"),rst.getString("admission"),rst.getString("email"),rst.getString("mobile"),rst.getString("nic"),rst.getString("address"),rst.getString("subName1"),rst.getString("subGrade1"),rst.getString("subName2"),rst.getString("subGrade2"),rst.getString("subName3"),rst.getString("subGrade3"),rst.getString("engGrade"),rst.getInt("islandRank"),rst.getDouble("zScore"),rst.getString("facultyId"),rst.getString("courseId"),rst.getString("password"));
+              UndergraduateStudentModel undergraduateStudentModel=new UndergraduateStudentModel(rst.getString("nameWithIntials"),rst.getString("userName"),rst.getString("regNo"),rst.getString("indexNo"),rst.getString("admission"),rst.getString("email"),rst.getString("mobile"),rst.getString("nic"),rst.getString("address"),rst.getString("subName1"),rst.getString("subGrade1"),rst.getString("subName2"),rst.getString("subGrade2"),rst.getString("subName3"),rst.getString("subGrade3"),rst.getString("engGrade"),rst.getString("islandRank"),rst.getString("zScore"),rst.getString("facultyId"),rst.getString("password"),rst.getString("courseId"));
               return undergraduateStudentModel;
           }
           else{

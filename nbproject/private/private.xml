@@ -3,12 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/manji/OneDrive/Documents/GitHub/Student-Enrollment-System/src/view/Login.java</file>
-            <file>file:/C:/Users/manji/OneDrive/Documents/GitHub/Student-Enrollment-System/src/view/Register_users.java</file>
-            <file>file:/C:/Users/manji/OneDrive/Documents/GitHub/Student-Enrollment-System/src/view/Login_users.java</file>
-            <file>file:/C:/Users/manji/OneDrive/Documents/GitHub/Student-Enrollment-System/src/view/School_of_Engineering.java</file>
-            <file>file:/C:/Users/manji/OneDrive/Documents/GitHub/Student-Enrollment-System/src/view/Dashborad.java</file>
-            <file>file:/C:/Users/manji/OneDrive/Documents/GitHub/Student-Enrollment-System/src/view/SelectDegreeProgramme1.java</file>
+            <file>file:/C:/Users/manji/OneDrive/Documents/GitHub/Student-Enrollment-System/src/controller/PostgraduateController.java</file>
+            <file>file:/C:/Users/manji/OneDrive/Documents/GitHub/Student-Enrollment-System/src/model/UndergraduateStudentModel.java</file>
+            <file>file:/C:/Users/manji/OneDrive/Documents/GitHub/Student-Enrollment-System/src/view/PostgraduateStudent.java</file>
+            <file>file:/C:/Users/manji/OneDrive/Documents/GitHub/Student-Enrollment-System/src/controller/UndergraduateStudentController.java</file>
+            <file>file:/C:/Users/manji/OneDrive/Documents/GitHub/Student-Enrollment-System/src/view/Course.java</file>
+            <file>file:/C:/Users/manji/OneDrive/Documents/GitHub/Student-Enrollment-System/src/view/UndergraduateStudent.java</file>
         </group>
     </open-files>
 </project-private>

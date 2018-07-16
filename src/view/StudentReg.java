@@ -69,8 +69,8 @@ public class StudentReg extends javax.swing.JFrame {
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
+        submitbtn = new javax.swing.JButton();
+        cancelbtn = new javax.swing.JButton();
         jLabel25 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
@@ -99,8 +99,8 @@ public class StudentReg extends javax.swing.JFrame {
         jTextField26 = new javax.swing.JTextField();
         jLabel24 = new javax.swing.JLabel();
         jTextField27 = new javax.swing.JTextField();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
+        submitbtnpostbtn = new javax.swing.JButton();
+        cancelpostbtn = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -210,20 +210,25 @@ public class StudentReg extends javax.swing.JFrame {
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 22, 30, 310));
 
-        jButton6.setBackground(new java.awt.Color(49, 144, 176));
-        jButton6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton6.setText("Submit");
-        jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 320, 100, -1));
-
-        jButton7.setBackground(new java.awt.Color(49, 144, 176));
-        jButton7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton7.setText("Cancel");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        submitbtn.setBackground(new java.awt.Color(49, 144, 176));
+        submitbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        submitbtn.setText("Submit");
+        submitbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                submitbtnActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 320, 100, -1));
+        jPanel1.add(submitbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 320, 100, -1));
+
+        cancelbtn.setBackground(new java.awt.Color(49, 144, 176));
+        cancelbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        cancelbtn.setText("Cancel");
+        cancelbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cancelbtnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cancelbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 320, 100, -1));
 
         jLabel25.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel25.setText("Subject Name");
@@ -307,15 +312,15 @@ public class StudentReg extends javax.swing.JFrame {
         jPanel2.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 110, -1, 30));
         jPanel2.add(jTextField27, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 110, 100, -1));
 
-        jButton8.setBackground(new java.awt.Color(49, 144, 176));
-        jButton8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton8.setText("Submit");
-        jPanel2.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 330, 100, -1));
+        submitbtnpostbtn.setBackground(new java.awt.Color(49, 144, 176));
+        submitbtnpostbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        submitbtnpostbtn.setText("Submit");
+        jPanel2.add(submitbtnpostbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 330, 100, -1));
 
-        jButton9.setBackground(new java.awt.Color(49, 144, 176));
-        jButton9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton9.setText("Cancel");
-        jPanel2.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 330, 100, -1));
+        cancelpostbtn.setBackground(new java.awt.Color(49, 144, 176));
+        cancelpostbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        cancelpostbtn.setText("Cancel");
+        jPanel2.add(cancelpostbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 330, 100, -1));
 
         jTabbedPane1.addTab("Postgraduate", jPanel2);
 
@@ -373,15 +378,19 @@ public class StudentReg extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void cancelbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelbtnActionPerformed
             this.dispose();
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_cancelbtnActionPerformed
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
        Dashborad dashborad=new Dashborad();
             dashborad.setVisible(true);
             this.dispose();  
     }//GEN-LAST:event_jLabel1MouseClicked
+
+    private void submitbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitbtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_submitbtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -422,15 +431,13 @@ public class StudentReg extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField NameWithInitials;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JButton cancelbtn;
+    private javax.swing.JButton cancelpostbtn;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -495,6 +502,8 @@ public class StudentReg extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
+    private javax.swing.JButton submitbtn;
+    private javax.swing.JButton submitbtnpostbtn;
     // End of variables declaration//GEN-END:variables
 
    /* private void newS_id(){
