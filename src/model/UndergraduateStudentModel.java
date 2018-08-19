@@ -223,11 +223,6 @@ public class UndergraduateStudentModel {
     public void setPassword(String password) {
         this.password = password;
     }
-    
-    
-    
-    
-    
-    
-    
+
+   
 }

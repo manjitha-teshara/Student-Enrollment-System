@@ -7,6 +7,8 @@ package view;
 
 import controller.CourseController;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import model.CourseModel;
 
@@ -16,11 +18,13 @@ import model.CourseModel;
  */
 public class AllCourseView extends javax.swing.JFrame {
 
-    /**
-     * Creates new form studentReg
-     */
+ 
     public AllCourseView() {
         initComponents();
+    }
+
+    public AllCourseView(String string, String string0, String string1, double aDouble) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     /**
@@ -31,20 +35,29 @@ public class AllCourseView extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
         nsbmsystemPUEntityManager = java.beans.Beans.isDesignTime() ? null : javax.persistence.Persistence.createEntityManagerFactory("nsbmsystemPU").createEntityManager();
-        adminQuery = java.beans.Beans.isDesignTime() ? null : nsbmsystemPUEntityManager.createQuery("SELECT a FROM Admin a");
-        adminList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : adminQuery.getResultList();
         course_1Query = java.beans.Beans.isDesignTime() ? null : nsbmsystemPUEntityManager.createQuery("SELECT c FROM Course_1 c");
         course_1List = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : course_1Query.getResultList();
+        course_1Query1 = java.beans.Beans.isDesignTime() ? null : nsbmsystemPUEntityManager.createQuery("SELECT c FROM Course_1 c");
+        course_1List1 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : course_1Query1.getResultList();
+        course_1Query2 = java.beans.Beans.isDesignTime() ? null : nsbmsystemPUEntityManager.createQuery("SELECT c FROM Course_1 c");
+        course_1List2 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : course_1Query2.getResultList();
+        course_1Query3 = java.beans.Beans.isDesignTime() ? null : nsbmsystemPUEntityManager.createQuery("SELECT c FROM Course_1 c");
+        course_1List3 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : course_1Query3.getResultList();
+        course_1Query4 = java.beans.Beans.isDesignTime() ? null : nsbmsystemPUEntityManager.createQuery("SELECT c FROM Course_1 c");
+        course_1List4 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : course_1Query4.getResultList();
+        course_1Query5 = java.beans.Beans.isDesignTime() ? null : nsbmsystemPUEntityManager.createQuery("SELECT c FROM Course_1 c");
+        course_1List5 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : course_1Query5.getResultList();
+        course_1Query6 = java.beans.Beans.isDesignTime() ? null : nsbmsystemPUEntityManager.createQuery("SELECT c FROM Course_1 c");
+        course_1List6 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : course_1Query6.getResultList();
+        faculty_1Query = java.beans.Beans.isDesignTime() ? null : nsbmsystemPUEntityManager.createQuery("SELECT f FROM Faculty_1 f");
+        faculty_1List = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : faculty_1Query.getResultList();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
-        addCoursebtn = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        courseTable = new javax.swing.JTable();
+        backbtn = new javax.swing.JButton();
+        cancelbtn = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -62,47 +75,25 @@ public class AllCourseView extends javax.swing.JFrame {
         jPanel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton2.setBackground(new java.awt.Color(49, 144, 176));
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton2.setText("Back");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        backbtn.setBackground(new java.awt.Color(49, 144, 176));
+        backbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        backbtn.setText("Back");
+        backbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                backbtnActionPerformed(evt);
             }
         });
-        jPanel7.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 390, 100, -1));
+        jPanel7.add(backbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 380, 100, -1));
 
-        addCoursebtn.setBackground(new java.awt.Color(49, 144, 176));
-        addCoursebtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        addCoursebtn.setText("Add Courses");
-        addCoursebtn.addActionListener(new java.awt.event.ActionListener() {
+        cancelbtn.setBackground(new java.awt.Color(49, 144, 176));
+        cancelbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        cancelbtn.setText("Cancel");
+        cancelbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addCoursebtnActionPerformed(evt);
+                cancelbtnActionPerformed(evt);
             }
         });
-        jPanel7.add(addCoursebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 390, 130, -1));
-
-        courseTable.setBackground(new java.awt.Color(242, 255, 204));
-        courseTable.setGridColor(new java.awt.Color(141, 199, 63));
-
-        org.jdesktop.swingbinding.JTableBinding jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, course_1List, courseTable);
-        org.jdesktop.swingbinding.JTableBinding.ColumnBinding columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${courseId}"));
-        columnBinding.setColumnName("Course Id");
-        columnBinding.setColumnClass(String.class);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${courseName}"));
-        columnBinding.setColumnName("Course Name");
-        columnBinding.setColumnClass(String.class);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${courseCodinater}"));
-        columnBinding.setColumnName("Course Codinater");
-        columnBinding.setColumnClass(String.class);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${semesterFees}"));
-        columnBinding.setColumnName("Semester Fees");
-        columnBinding.setColumnClass(java.math.BigDecimal.class);
-        bindingGroup.addBinding(jTableBinding);
-        jTableBinding.bind();
-        jScrollPane1.setViewportView(courseTable);
-
-        jPanel7.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 820, 330));
+        jPanel7.add(cancelbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 380, 100, -1));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -142,7 +133,7 @@ public class AllCourseView extends javax.swing.JFrame {
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -155,27 +146,22 @@ public class AllCourseView extends javax.swing.JFrame {
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 590));
 
-        bindingGroup.bind();
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void cancelbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelbtnActionPerformed
+            this.dispose();
+    }//GEN-LAST:event_cancelbtnActionPerformed
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
  Dashborad dashborad=new Dashborad();
             dashborad.setVisible(true);
             this.dispose();      }//GEN-LAST:event_jLabel1MouseClicked
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-            Dashborad dashborad=new Dashborad();
-            dashborad.setVisible(true);
-            this.dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void backbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backbtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_backbtnActionPerformed
 
-    private void addCoursebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addCoursebtnActionPerformed
-         Course course=new Course();
-        course.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_addCoursebtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -188,7 +174,7 @@ public class AllCourseView extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Windows".equals(info.getName())) {
+                if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -204,36 +190,6 @@ public class AllCourseView extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -244,21 +200,44 @@ public class AllCourseView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton addCoursebtn;
-    private java.util.List<view.Admin> adminList;
-    private javax.persistence.Query adminQuery;
-    private javax.swing.JTable courseTable;
+    private javax.swing.JButton backbtn;
+    private javax.swing.JButton cancelbtn;
     private java.util.List<view.Course_1> course_1List;
+    private java.util.List<view.Course_1> course_1List1;
+    private java.util.List<view.Course_1> course_1List2;
+    private java.util.List<view.Course_1> course_1List3;
+    private java.util.List<view.Course_1> course_1List4;
+    private java.util.List<view.Course_1> course_1List5;
+    private java.util.List<view.Course_1> course_1List6;
     private javax.persistence.Query course_1Query;
-    private javax.swing.JButton jButton2;
+    private javax.persistence.Query course_1Query1;
+    private javax.persistence.Query course_1Query2;
+    private javax.persistence.Query course_1Query3;
+    private javax.persistence.Query course_1Query4;
+    private javax.persistence.Query course_1Query5;
+    private javax.persistence.Query course_1Query6;
+    private java.util.List<view.Faculty_1> faculty_1List;
+    private javax.persistence.Query faculty_1Query;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.persistence.EntityManager nsbmsystemPUEntityManager;
-    private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
+
+    /**
+     * @return the courseCodinatertxt
+     */
+   
+
+    /**
+     * @param courseCodinatertxt the courseCodinatertxt to set
+     */
+   
+
+    /**
+     * @return the courseIdtxt
+     */
 }

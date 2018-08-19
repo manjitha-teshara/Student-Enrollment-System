@@ -270,6 +270,12 @@ public class Subject extends javax.swing.JFrame {
             }
         });
         jPanel7.add(subjectNametxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 50, 100, -1));
+
+        subjectCodetxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                subjectCodetxtActionPerformed(evt);
+            }
+        });
         jPanel7.add(subjectCodetxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, 100, -1));
         jPanel7.add(supervisertxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 110, 100, -1));
         jPanel7.add(instroucter1txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 100, -1));
@@ -508,6 +514,10 @@ public class Subject extends javax.swing.JFrame {
 
         }
     }//GEN-LAST:event_deletebtn1ActionPerformed
+
+    private void subjectCodetxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subjectCodetxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_subjectCodetxtActionPerformed
 
     /**
      * @param args the command line arguments

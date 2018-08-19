@@ -241,7 +241,7 @@ public class Faculty extends javax.swing.JFrame {
         
         FacultyModel facultyModel=new FacultyModel(facultyId, facultyName, facultyHead);
        
-        System.out.println("IN course edit");
+        //System.out.println("IN course edit");
         try {
             int res=FacultyController.editFaculty(facultyModel);
             if(res>0){
@@ -266,8 +266,8 @@ public class Faculty extends javax.swing.JFrame {
         try{
              FacultyModel facultyModel =FacultyController.searchFaculty(facultyId);
             if (facultyModel != null) {
-                facultyNametxt.setText(facultyModel.getFacultyId());
-                facultyHeadtxt.setText(facultyModel.getFacultyName());
+                facultyIdtxt.setText(facultyModel.getFacultyId());
+                facultyNametxt.setText(facultyModel.getFacultyName());
                 facultyHeadtxt.setText(facultyModel.getFacultyHead());
                
             } else {

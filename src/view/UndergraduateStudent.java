@@ -36,12 +36,10 @@ public class UndergraduateStudent extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
-        nsbmsystemPUEntityManager = java.beans.Beans.isDesignTime() ? null : javax.persistence.Persistence.createEntityManagerFactory("nsbmsystemPU").createEntityManager();
-        faculty_1Query = java.beans.Beans.isDesignTime() ? null : nsbmsystemPUEntityManager.createQuery("SELECT f FROM Faculty_1 f");
-        faculty_1List = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : faculty_1Query.getResultList();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         nameWithInitialstxt = new javax.swing.JTextField();
@@ -60,6 +58,8 @@ public class UndergraduateStudent extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         addresstxt = new javax.swing.JTextArea();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jLabel19 = new javax.swing.JLabel();
         subGrade3txt = new javax.swing.JTextField();
         subName2txt = new javax.swing.JTextField();
@@ -90,9 +90,9 @@ public class UndergraduateStudent extends javax.swing.JFrame {
         jLabel23 = new javax.swing.JLabel();
         passwordtxt = new javax.swing.JPasswordField();
         jLabel24 = new javax.swing.JLabel();
+        facultyIdtxt = new javax.swing.JTextField();
         jLabel25 = new javax.swing.JLabel();
         courseIdtxt = new javax.swing.JTextField();
-        facultyIdtxt = new javax.swing.JComboBox<>();
         jPanel5 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -106,11 +106,10 @@ public class UndergraduateStudent extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(141, 199, 63));
 
         jPanel7.setBackground(new java.awt.Color(141, 199, 63));
-        jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Undergraduate Student Registration", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 18), new java.awt.Color(25, 88, 157))); // NOI18N
+        jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Student Registration", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 18), new java.awt.Color(25, 88, 157))); // NOI18N
         jPanel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(141, 199, 63));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -126,6 +125,12 @@ public class UndergraduateStudent extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setText("Reg No");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, -1, -1));
+
+        regNotxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                regNotxtActionPerformed(evt);
+            }
+        });
         jPanel1.add(regNotxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, 100, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -157,6 +162,16 @@ public class UndergraduateStudent extends javax.swing.JFrame {
         jScrollPane1.setViewportView(addresstxt);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 260, 170, 80));
+
+        jButton1.setBackground(new java.awt.Color(49, 144, 176));
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton1.setText("Next");
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 410, -1, -1));
+
+        jButton2.setBackground(new java.awt.Color(49, 144, 176));
+        jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton2.setText("Cancel");
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, -1, -1));
 
         jLabel19.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel19.setText("Subject Grade");
@@ -213,32 +228,51 @@ public class UndergraduateStudent extends javax.swing.JFrame {
                 submitbtnActionPerformed(evt);
             }
         });
-        jPanel1.add(submitbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 340, 90, -1));
+        jPanel1.add(submitbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 340, -1, -1));
 
         cancelbtn.setBackground(new java.awt.Color(49, 144, 176));
         cancelbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         cancelbtn.setText("Cancel");
-        jPanel1.add(cancelbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 340, 80, -1));
+        cancelbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cancelbtnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cancelbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 340, -1, -1));
 
-        datetebtn.setBackground(new java.awt.Color(49, 144, 176));
-        datetebtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         datetebtn.setText("Delete");
-        jPanel1.add(datetebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 340, 80, -1));
+        datetebtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                datetebtnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(datetebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 340, -1, -1));
 
-        editbtn.setBackground(new java.awt.Color(49, 144, 176));
-        editbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         editbtn.setText("Edit");
-        jPanel1.add(editbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 340, 80, -1));
+        editbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editbtnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(editbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 340, -1, -1));
 
         backbtn.setBackground(new java.awt.Color(49, 144, 176));
         backbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         backbtn.setText("Back");
-        jPanel1.add(backbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 340, 80, -1));
+        backbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backbtnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(backbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 340, -1, -1));
 
-        searchbtn.setBackground(new java.awt.Color(49, 144, 176));
-        searchbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         searchbtn.setText("Search");
-        jPanel1.add(searchbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 10, 80, -1));
+        searchbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchbtnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(searchbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 10, -1, -1));
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel14.setText("Address");
@@ -253,21 +287,16 @@ public class UndergraduateStudent extends javax.swing.JFrame {
         jLabel24.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel24.setText("Faculty Id");
         jPanel1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 250, -1, 30));
+        jPanel1.add(facultyIdtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 250, 100, -1));
 
         jLabel25.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel25.setText("Course Id");
         jPanel1.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 280, -1, 30));
         jPanel1.add(courseIdtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 280, 100, -1));
 
-        facultyIdtxt.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        facultyIdtxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                facultyIdtxtActionPerformed(evt);
-            }
-        });
-        jPanel1.add(facultyIdtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 250, 100, -1));
+        jTabbedPane1.addTab("Undergaduate", jPanel1);
 
-        jPanel7.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 840, 450));
+        jPanel7.add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 830, 420));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -316,10 +345,14 @@ public class UndergraduateStudent extends javax.swing.JFrame {
 
         jPanel3.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 22, 840, 120));
 
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 870, 590));
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 870, 650));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void regNotxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regNotxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_regNotxtActionPerformed
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
        Dashborad dashborad=new Dashborad();
@@ -327,12 +360,8 @@ public class UndergraduateStudent extends javax.swing.JFrame {
             this.dispose();  
     }//GEN-LAST:event_jLabel1MouseClicked
 
-    private void facultyIdtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_facultyIdtxtActionPerformed
-       
-        
-    }//GEN-LAST:event_facultyIdtxtActionPerformed
-
     private void submitbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitbtnActionPerformed
+
         String nameWithIntials=nameWithInitialstxt.getText();
         String userName=userNametxt.getText();
         String regNo=regNotxt.getText();
@@ -340,36 +369,138 @@ public class UndergraduateStudent extends javax.swing.JFrame {
         String admission=admissionDatetxt.getText();
         String email=emailtxt.getText();
         String mobile=mobiletxt.getText();
-        String nic=nictxt1.getText();
+        String nic=admissionDatetxt.getText();
         String address=addresstxt.getText();
         String subName1=subName1txt.getText();
         String subGrade1=subGrade1txt.getText();
         String subName2=subName2txt.getText();
-        String subGrade2=subGrade2txt.getText();
-        String subName3=subName3txt.getText();
-        String subGrade3=subGrade3txt.getText();
+        String subName3=subGrade3txt.getText();
         String engGrade=engGradetxt.getText();
-        String islandRank=islandRanktxt.getText();
+        String isislandRank=islandRanktxt.getText();
         String zScore=zScoretxt.getText();
-        String facultyId=facultyIdtxt.getItemAt(WIDTH);
+        String facultyId=facultyIdtxt.getText();
         String courseId=courseIdtxt.getText();
         String password=passwordtxt.getText();
-        
-        UndergraduateStudentModel undergraduateStudentModel=new UndergraduateStudentModel(nameWithIntials, userName, regNo, indexNo, admission, email, mobile, nic, address, subName1, subGrade1, subName2, subGrade2, subName3, subGrade3, engGrade, islandRank, zScore, facultyId, courseId, password);
-        int res = 0;
+        UndergraduateStudentModel undergraduateStudentModel=new UndergraduateStudentModel(nameWithIntials, userName, regNo, indexNo, admission, email, mobile, nic, address, subName1, subGrade1, subName2, subGrade1, subName3, subGrade1, engGrade, isislandRank, zScore, facultyId, courseId, password);
+
+                int res;
         try {
             res = UndergraduateStudentController.addUnderStudent(undergraduateStudentModel);
-            if(res>0){
-           JOptionPane.showMessageDialog(this, "Added Success");
-       }
-        } 
-        catch (ClassNotFoundException ex) {
+            if (res > 0) {
+            JOptionPane.showMessageDialog(this, "Added Success");
+        }
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(UndergraduateStudent.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+           // Logger.getLogger(UndergraduateStudent.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(this, "Database mismatch");
+        }
+        
+    }//GEN-LAST:event_submitbtnActionPerformed
+
+    private void cancelbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelbtnActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_cancelbtnActionPerformed
+
+    private void datetebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_datetebtnActionPerformed
+        String id=regNotxt.getText();
+        try {
+            int res = UndergraduateStudentController.deleteUnderStudent(id);
+            if (res > 0) {
+                JOptionPane.showMessageDialog(this, "Delete Success ");
+            } else {
+                JOptionPane.showMessageDialog(this, "Delete Fail ");
+            }
+        }catch (ClassNotFoundException ex) {
             JOptionPane.showMessageDialog(this, "No Driver found");
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(this, ex.getMessage());
 
         }
-    }//GEN-LAST:event_submitbtnActionPerformed
+    }//GEN-LAST:event_datetebtnActionPerformed
+
+    private void editbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editbtnActionPerformed
+        String nameWithIntials=nameWithInitialstxt.getText();
+        String userName=userNametxt.getText();
+        String regNo=regNotxt.getText();
+        String indexNo=indexNotxt.getText();
+        String admission=admissionDatetxt.getText();
+        String email=emailtxt.getText();
+        String mobile=mobiletxt.getText();
+        String nic=admissionDatetxt.getText();
+        String address=addresstxt.getText();
+        String subName1=subName1txt.getText();
+        String subGrade1=subGrade1txt.getText();
+        String subName2=subName2txt.getText();
+        String subName3=subGrade3txt.getText();
+        String engGrade=engGradetxt.getText();
+        String isislandRank=islandRanktxt.getText();
+        String zScore=zScoretxt.getText();
+        String facultyId=facultyIdtxt.getText();
+        String courseId=courseIdtxt.getText();
+        String password=passwordtxt.getText();
+
+        UndergraduateStudentModel undergraduateStudentModel=new UndergraduateStudentModel(nameWithIntials, userName, regNo, indexNo, admission, email, mobile, nic, address, subName1, subGrade1, subName2, subGrade1, subName3, subGrade1, engGrade, isislandRank, zScore, facultyId, courseId, password);
+
+        System.out.println("IN course edit");
+        try {
+            int res=UndergraduateStudentController.editUnderStudent(undergraduateStudentModel);
+            if(res>0){
+                JOptionPane.showMessageDialog(this, "Update Success");
+            }
+
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(UndergraduateStudent.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(UndergraduateStudent.class.getName()).log(Level.SEVERE, null, ex);
+        } 
+    }//GEN-LAST:event_editbtnActionPerformed
+
+    private void backbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backbtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_backbtnActionPerformed
+
+    private void searchbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchbtnActionPerformed
+
+        String regNo=regNotxt.getText();
+
+        try{
+            UndergraduateStudentModel undergraduateStudentModel = UndergraduateStudentController.searchUnderStudent(regNo);
+            if (undergraduateStudentModel != null) {
+                /*courseNametxt.setText(courseModel.getCourseName());
+                courseCodinatertxt.setText(courseModel.getCourseCodinater());
+                semesterFeestxt.setText(Double.toString(courseModel.getSemesterFees()));*/
+                nameWithInitialstxt.setText(undergraduateStudentModel.getNameWithIntials());
+                userNametxt.setText(undergraduateStudentModel.getUserName());
+                regNotxt.setText(undergraduateStudentModel.getRegNo());
+                indexNotxt.setText(undergraduateStudentModel.getIndexNo());
+                admissionDatetxt.setText(undergraduateStudentModel.getAdmission());
+                emailtxt.setText(undergraduateStudentModel.getEmail());
+                mobiletxt.setText(undergraduateStudentModel.getMobile());
+                admissionDatetxt.setText(undergraduateStudentModel.getNic());
+                addresstxt.setText(undergraduateStudentModel.getAddress());
+                subName1txt.setText(undergraduateStudentModel.getSubName1());
+                subGrade1txt.setText(undergraduateStudentModel.getSubGrade1());
+                subName2txt.setText(undergraduateStudentModel.getSubName2());
+                subGrade2txt.setText(undergraduateStudentModel.getSubGrade2());
+                subName3txt.setText(undergraduateStudentModel.getSubName3());
+                subGrade3txt.setText(undergraduateStudentModel.getSubGrade3());
+                engGradetxt.setText(undergraduateStudentModel.getEngGrade());
+                islandRanktxt.setText(undergraduateStudentModel.getIslandRank());
+                zScoretxt.setText(undergraduateStudentModel.getzScore());
+                facultyIdtxt.setText(undergraduateStudentModel.getFacultyId());
+                courseIdtxt.setText(undergraduateStudentModel.getCourseId());
+
+            } else {
+                JOptionPane.showMessageDialog(this, "No Such Course ");
+            }        }
+            catch (ClassNotFoundException ex) {
+                JOptionPane.showMessageDialog(this, "No Driver found");
+            } catch (SQLException ex) {
+                JOptionPane.showMessageDialog(this, ex.getMessage());
+
+            }
+    }//GEN-LAST:event_searchbtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -400,6 +531,10 @@ public class UndergraduateStudent extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -420,11 +555,11 @@ public class UndergraduateStudent extends javax.swing.JFrame {
     private javax.swing.JButton editbtn;
     private javax.swing.JTextField emailtxt;
     private javax.swing.JTextField engGradetxt;
-    private javax.swing.JComboBox<String> facultyIdtxt;
-    private java.util.List<view.Faculty_1> faculty_1List;
-    private javax.persistence.Query faculty_1Query;
+    private javax.swing.JTextField facultyIdtxt;
     private javax.swing.JTextField indexNotxt;
     private javax.swing.JTextField islandRanktxt;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -455,10 +590,10 @@ public class UndergraduateStudent extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField mobiletxt;
     private javax.swing.JTextField nameWithInitialstxt;
     private javax.swing.JTextField nictxt1;
-    private javax.persistence.EntityManager nsbmsystemPUEntityManager;
     private javax.swing.JPasswordField passwordtxt;
     private javax.swing.JTextField regNotxt;
     private javax.swing.JButton searchbtn;

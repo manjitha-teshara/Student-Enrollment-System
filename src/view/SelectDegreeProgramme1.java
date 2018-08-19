@@ -179,8 +179,9 @@ public class SelectDegreeProgramme1 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-            UndergraduateStudent undergraduateStudent=new UndergraduateStudent();
-            undergraduateStudent.setVisible(true);
+           
+            StudentReg studentReg=new StudentReg();
+            studentReg.setVisible(true);
             this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 

@@ -19,7 +19,7 @@ import model.UndergraduateStudentModel;
 public class UndergraduateStudentController {
     
     public static int addUnderStudent(UndergraduateStudentModel undergraduateStudentModel) throws ClassNotFoundException, SQLException {
-        String sql = "INSERT INTO postgraduatestudent(nameWithIntials,userName,regNo,indexNo,admission,email,mobile,nic,address,subName1,subGrade1,subName2,subGrade2,subName3,subGrade3,engGrade,islandRank,zScore,facultyId,password,courseId) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        String sql = "INSERT INTO undergraduatestudent(nameWithIntials,userName,regNo,indexNo,admission,email,mobile,nic,address,subName1,subGrade1,subName2,subGrade2,subName3,subGrade3,engGrade,islandRank,zScore,facultyId,password,courseId) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         Connection conn = DBConnection.getDBConnection().getConnection();
         PreparedStatement stm = conn.prepareStatement(sql);
         stm.setObject(1, undergraduateStudentModel.getNameWithIntials());

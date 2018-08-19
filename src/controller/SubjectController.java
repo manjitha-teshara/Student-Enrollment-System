@@ -24,8 +24,8 @@ public class SubjectController {
         Connection conn = DBConnection.getDBConnection().getConnection();
         PreparedStatement stm = conn.prepareStatement(sql);
         //subjectName, subjectCode, superviser, instroucters1, instroucters2, numberOfCredit, numberOfAssignment);
-        stm.setObject(1, subject.getSubjectName());
-        stm.setObject(2,subject.getSubjectCode());
+        stm.setObject(1, subject.getSubjectCode());
+        stm.setObject(2,subject.getSubjectName());
         stm.setObject(3,subject.getSuperviser());
         stm.setObject(4,subject.getInstroucters1());
         stm.setObject(5,subject.getInstroucters2());

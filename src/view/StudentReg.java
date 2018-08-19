@@ -5,6 +5,14 @@
  */
 package view;
 
+import controller.PostgraduateController;
+import controller.UndergraduateStudentController;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import model.PostgraduateStudentModel;
+import model.UndergraduateStudentModel;
 import other.IDGenerator;
 
 /**
@@ -36,71 +44,87 @@ public class StudentReg extends javax.swing.JFrame {
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        NameWithInitials = new javax.swing.JTextField();
+        nameWithInitials1txt = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        userName1txt = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        regNo1txt = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        indexNo1txt = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        email1txt = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        mobile1txt = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        admissionDate1txt = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        address1txt = new javax.swing.JTextArea();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel19 = new javax.swing.JLabel();
-        jTextField16 = new javax.swing.JTextField();
-        jTextField18 = new javax.swing.JTextField();
-        jTextField19 = new javax.swing.JTextField();
-        jTextField20 = new javax.swing.JTextField();
-        jTextField21 = new javax.swing.JTextField();
+        subGrade3txt = new javax.swing.JTextField();
+        subName2txt = new javax.swing.JTextField();
+        zScoretxt = new javax.swing.JTextField();
+        engGradetxt = new javax.swing.JTextField();
+        inslandRanktxt = new javax.swing.JTextField();
         jButton5 = new javax.swing.JButton();
-        jTextField22 = new javax.swing.JTextField();
+        subName1txt = new javax.swing.JTextField();
         jLabel20 = new javax.swing.JLabel();
-        jTextField23 = new javax.swing.JTextField();
-        jTextField24 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
+        subName3txt = new javax.swing.JTextField();
+        subGrade2txt = new javax.swing.JTextField();
+        subGrade1txt = new javax.swing.JTextField();
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        submitbtn = new javax.swing.JButton();
+        underSubmitbtn = new javax.swing.JButton();
         cancelbtn = new javax.swing.JButton();
         jLabel25 = new javax.swing.JLabel();
+        nic1txt1 = new javax.swing.JTextField();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        facultyIdtxt1 = new javax.swing.JTextField();
+        jLabel32 = new javax.swing.JLabel();
+        courseIdtxt1 = new javax.swing.JTextField();
+        jLabel33 = new javax.swing.JLabel();
+        passwordtxt1 = new javax.swing.JPasswordField();
         jPanel2 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
-        jTextField9 = new javax.swing.JTextField();
+        nameWithInitialstxt = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
+        userNametxt = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
-        jTextField11 = new javax.swing.JTextField();
+        regNotxt = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
-        jTextField12 = new javax.swing.JTextField();
+        indexNotxt = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
-        jTextField13 = new javax.swing.JTextField();
+        emailtxt = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
-        jTextField14 = new javax.swing.JTextField();
+        mobiletxt = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
-        jTextField15 = new javax.swing.JTextField();
+        admissionDatetxt = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
+        addresstxt = new javax.swing.JTextArea();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jSeparator2 = new javax.swing.JSeparator();
         jLabel23 = new javax.swing.JLabel();
-        jTextField25 = new javax.swing.JTextField();
+        insitutetxt = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        jTextField26 = new javax.swing.JTextField();
+        qualificationTypetxt = new javax.swing.JTextField();
         jLabel24 = new javax.swing.JLabel();
-        jTextField27 = new javax.swing.JTextField();
-        submitbtnpostbtn = new javax.swing.JButton();
+        qualificationtxt = new javax.swing.JTextField();
+        postSubmitbtnpostbtn = new javax.swing.JButton();
         cancelpostbtn = new javax.swing.JButton();
+        jLabel26 = new javax.swing.JLabel();
+        nictxt1 = new javax.swing.JTextField();
+        jLabel28 = new javax.swing.JLabel();
+        facultyIdtxt = new javax.swing.JTextField();
+        jLabel29 = new javax.swing.JLabel();
+        courseIdtxt = new javax.swing.JTextField();
+        jLabel30 = new javax.swing.JLabel();
+        passwordtxt = new javax.swing.JPasswordField();
         jPanel5 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -127,45 +151,45 @@ public class StudentReg extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setText("Name with Initials");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 47, -1, 30));
-        jPanel1.add(NameWithInitials, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 50, 100, -1));
+        jPanel1.add(nameWithInitials1txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 50, 100, -1));
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel10.setText("User Name");
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 80, -1, -1));
-        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 100, -1));
+        jPanel1.add(userName1txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 100, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setText("Reg No");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, -1, -1));
-        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, 100, -1));
+        jPanel1.add(regNo1txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, 100, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setText("Index No");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, -1, -1));
-        jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, 100, -1));
+        jPanel1.add(indexNo1txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, 100, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setText("Email");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 170, -1, -1));
-        jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 170, 100, -1));
+        jPanel1.add(email1txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 170, 100, -1));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel6.setText("Mobile");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 200, -1, -1));
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 100, -1));
+        jPanel1.add(mobile1txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 100, -1));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel7.setText("NIC");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, -1, -1));
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 230, 100, -1));
+        jPanel1.add(admissionDate1txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 360, 100, -1));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel8.setText("Address");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, -1, -1));
+        jLabel8.setText("Admission Date");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 360, -1, -1));
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        address1txt.setColumns(20);
+        address1txt.setRows(5);
+        jScrollPane1.setViewportView(address1txt);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 260, 170, -1));
 
@@ -182,22 +206,22 @@ public class StudentReg extends javax.swing.JFrame {
         jLabel19.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel19.setText("Subject Grade");
         jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 30, -1, 30));
-        jPanel1.add(jTextField16, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 120, 100, -1));
-        jPanel1.add(jTextField18, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 90, 100, -1));
-        jPanel1.add(jTextField19, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 220, 100, -1));
-        jPanel1.add(jTextField20, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 150, 100, -1));
-        jPanel1.add(jTextField21, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 190, 100, -1));
+        jPanel1.add(subGrade3txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 120, 100, -1));
+        jPanel1.add(subName2txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 90, 100, -1));
+        jPanel1.add(zScoretxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 220, 100, -1));
+        jPanel1.add(engGradetxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 150, 100, -1));
+        jPanel1.add(inslandRanktxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 190, 100, -1));
 
         jButton5.setText("Submit");
         jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 320, -1, -1));
-        jPanel1.add(jTextField22, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 60, 100, -1));
+        jPanel1.add(subName1txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 60, 100, -1));
 
         jLabel20.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel20.setText("General English");
         jPanel1.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 150, -1, 30));
-        jPanel1.add(jTextField23, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 120, 100, -1));
-        jPanel1.add(jTextField24, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 90, 100, -1));
-        jPanel1.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 60, 100, -1));
+        jPanel1.add(subName3txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 120, 100, -1));
+        jPanel1.add(subGrade2txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 90, 100, -1));
+        jPanel1.add(subGrade1txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 60, 100, -1));
 
         jLabel21.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel21.setText("Iland Rank");
@@ -210,15 +234,15 @@ public class StudentReg extends javax.swing.JFrame {
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 22, 30, 310));
 
-        submitbtn.setBackground(new java.awt.Color(49, 144, 176));
-        submitbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        submitbtn.setText("Submit");
-        submitbtn.addActionListener(new java.awt.event.ActionListener() {
+        underSubmitbtn.setBackground(new java.awt.Color(49, 144, 176));
+        underSubmitbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        underSubmitbtn.setText("Submit");
+        underSubmitbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                submitbtnActionPerformed(evt);
+                underSubmitbtnActionPerformed(evt);
             }
         });
-        jPanel1.add(submitbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 320, 100, -1));
+        jPanel1.add(underSubmitbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 360, 100, -1));
 
         cancelbtn.setBackground(new java.awt.Color(49, 144, 176));
         cancelbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -228,11 +252,31 @@ public class StudentReg extends javax.swing.JFrame {
                 cancelbtnActionPerformed(evt);
             }
         });
-        jPanel1.add(cancelbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 320, 100, -1));
+        jPanel1.add(cancelbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 360, 100, -1));
 
         jLabel25.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel25.setText("Subject Name");
         jPanel1.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 30, -1, 30));
+        jPanel1.add(nic1txt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 230, 100, -1));
+
+        jLabel27.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel27.setText("Address");
+        jPanel1.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, -1, -1));
+
+        jLabel31.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel31.setText("Faculty Id");
+        jPanel1.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 250, -1, 30));
+        jPanel1.add(facultyIdtxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 250, 100, -1));
+
+        jLabel32.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel32.setText("Course Id");
+        jPanel1.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 280, -1, 30));
+        jPanel1.add(courseIdtxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 280, 100, -1));
+
+        jLabel33.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel33.setText("Password");
+        jPanel1.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 300, -1, 30));
+        jPanel1.add(passwordtxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 310, 100, -1));
 
         jTabbedPane1.addTab("Undergaduate", jPanel1);
 
@@ -242,45 +286,45 @@ public class StudentReg extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel11.setText("Name with Initials");
         jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 47, -1, 30));
-        jPanel2.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 50, 100, -1));
+        jPanel2.add(nameWithInitialstxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 50, 100, -1));
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel12.setText("User Name");
         jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 80, -1, -1));
-        jPanel2.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 100, -1));
+        jPanel2.add(userNametxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 100, -1));
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel13.setText("Reg No");
         jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, -1, -1));
-        jPanel2.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, 100, -1));
+        jPanel2.add(regNotxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, 100, -1));
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel14.setText("Index No");
         jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, -1, -1));
-        jPanel2.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, 100, -1));
+        jPanel2.add(indexNotxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, 100, -1));
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel15.setText("Email");
         jPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 170, -1, -1));
-        jPanel2.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 170, 100, -1));
+        jPanel2.add(emailtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 170, 100, -1));
 
         jLabel16.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel16.setText("Mobile");
         jPanel2.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 200, -1, -1));
-        jPanel2.add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 100, -1));
+        jPanel2.add(mobiletxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 100, -1));
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel17.setText("NIC");
         jPanel2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, -1, -1));
-        jPanel2.add(jTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 230, 100, -1));
+        jPanel2.add(admissionDatetxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 360, 100, -1));
 
         jLabel18.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel18.setText("Address");
-        jPanel2.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, -1, -1));
+        jLabel18.setText("Admession Date");
+        jPanel2.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 360, -1, -1));
 
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jScrollPane2.setViewportView(jTextArea2);
+        addresstxt.setColumns(20);
+        addresstxt.setRows(5);
+        jScrollPane2.setViewportView(addresstxt);
 
         jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 260, 170, -1));
 
@@ -300,27 +344,52 @@ public class StudentReg extends javax.swing.JFrame {
         jLabel23.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel23.setText("Insitute");
         jPanel2.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 50, -1, 30));
-        jPanel2.add(jTextField25, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 50, 100, -1));
+        jPanel2.add(insitutetxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 50, 100, -1));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel9.setText("Qualification Type");
         jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 80, -1, 30));
-        jPanel2.add(jTextField26, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 80, 100, -1));
+        jPanel2.add(qualificationTypetxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 80, 100, -1));
 
         jLabel24.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel24.setText("Qualification");
         jPanel2.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 110, -1, 30));
-        jPanel2.add(jTextField27, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 110, 100, -1));
+        jPanel2.add(qualificationtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 110, 100, -1));
 
-        submitbtnpostbtn.setBackground(new java.awt.Color(49, 144, 176));
-        submitbtnpostbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        submitbtnpostbtn.setText("Submit");
-        jPanel2.add(submitbtnpostbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 330, 100, -1));
+        postSubmitbtnpostbtn.setBackground(new java.awt.Color(49, 144, 176));
+        postSubmitbtnpostbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        postSubmitbtnpostbtn.setText("Submit");
+        postSubmitbtnpostbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                postSubmitbtnpostbtnActionPerformed(evt);
+            }
+        });
+        jPanel2.add(postSubmitbtnpostbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 330, 100, -1));
 
         cancelpostbtn.setBackground(new java.awt.Color(49, 144, 176));
         cancelpostbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         cancelpostbtn.setText("Cancel");
         jPanel2.add(cancelpostbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 330, 100, -1));
+
+        jLabel26.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel26.setText("Address");
+        jPanel2.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, -1, -1));
+        jPanel2.add(nictxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 230, 100, -1));
+
+        jLabel28.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel28.setText("Faculty Id");
+        jPanel2.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 140, -1, 30));
+        jPanel2.add(facultyIdtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 140, 100, -1));
+
+        jLabel29.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel29.setText("Course Id");
+        jPanel2.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 170, -1, 30));
+        jPanel2.add(courseIdtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 170, 100, -1));
+
+        jLabel30.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel30.setText("Password");
+        jPanel2.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 190, -1, 30));
+        jPanel2.add(passwordtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 200, 100, -1));
 
         jTabbedPane1.addTab("Postgraduate", jPanel2);
 
@@ -388,9 +457,80 @@ public class StudentReg extends javax.swing.JFrame {
             this.dispose();  
     }//GEN-LAST:event_jLabel1MouseClicked
 
-    private void submitbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitbtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_submitbtnActionPerformed
+    private void underSubmitbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_underSubmitbtnActionPerformed
+        String nameWithIntials=nameWithInitials1txt.getText();
+        String userName=userName1txt.getText();
+        String regNo=regNo1txt.getText();
+        String indexNo=indexNo1txt.getText();
+        String admission=admissionDate1txt.getText();
+        String email=email1txt.getText();
+        String mobile=mobile1txt.getText();
+        String nic=admissionDate1txt.getText();
+        String address=address1txt.getText();
+        String subName1=subName1txt.getText();
+        String subGrade1=subGrade1txt.getText();
+        String subName2=subName2txt.getText();
+        String subName3=subGrade3txt.getText();
+        String engGrade=engGradetxt.getText();
+        String isislandRank=inslandRanktxt.getText();
+        String zScore=zScoretxt.getText();
+        String facultyId=facultyIdtxt.getText();
+        String courseId=courseIdtxt.getText();
+        String password=passwordtxt.getText();
+        UndergraduateStudentModel undergraduateStudentModel=new UndergraduateStudentModel(nameWithIntials, userName, regNo, indexNo, admission, email, mobile, nic, address, subName1, subGrade1, subName2, subGrade1, subName3, subGrade1, engGrade, isislandRank, zScore, facultyId, courseId, password);
+
+                int res;
+        try {
+            res = UndergraduateStudentController.addUnderStudent(undergraduateStudentModel);
+            if (res > 0) {
+            JOptionPane.showMessageDialog(this, "Added Success");
+        }
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(UndergraduateStudent.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+           // Logger.getLogger(UndergraduateStudent.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(this, "Database mismatch");
+        }
+     
+    }//GEN-LAST:event_underSubmitbtnActionPerformed
+
+    private void postSubmitbtnpostbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_postSubmitbtnpostbtnActionPerformed
+       
+        
+        String nameWithInitials=nameWithInitialstxt.getText();
+        String userName=userNametxt.getText();
+        String regNo=regNotxt.getText();
+        String indexNo=indexNotxt.getText();
+        String email=emailtxt.getText();
+        String mobile=mobiletxt.getText();
+        String nic=admissionDatetxt.getText();
+        String address=addresstxt.getText();
+        String addmissionDate=admissionDatetxt.getText();
+        String institute=insitutetxt.getText();
+        String qualificationType=qualificationTypetxt.getText();
+        String qualification=qualificationtxt.getText();
+        String faculty=facultyIdtxt.getText();
+        String courseId=courseIdtxt.getText();
+        String password=passwordtxt.getText();
+        
+       PostgraduateStudentModel postgraduateStudentModel=new PostgraduateStudentModel(nameWithInitials, userName, regNo, indexNo, addmissionDate, email, mobile, nic, address, institute, qualificationType, qualification, faculty, courseId, password);
+       
+       //int res;
+       int res = 0;
+        try {
+            res = PostgraduateController.addPostStudent(postgraduateStudentModel);
+            if(res>0){
+           JOptionPane.showMessageDialog(this, "Added Success");
+       }
+        } 
+        catch (ClassNotFoundException ex) {
+            JOptionPane.showMessageDialog(this, "No Driver found");
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(this, ex.getMessage());
+
+        }
+     
+    }//GEN-LAST:event_postSubmitbtnpostbtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -429,10 +569,24 @@ public class StudentReg extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField NameWithInitials;
+    private javax.swing.JTextArea address1txt;
+    private javax.swing.JTextArea addresstxt;
+    private javax.swing.JTextField admissionDate1txt;
+    private javax.swing.JTextField admissionDatetxt;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton cancelbtn;
     private javax.swing.JButton cancelpostbtn;
+    private javax.swing.JTextField courseIdtxt;
+    private javax.swing.JTextField courseIdtxt1;
+    private javax.swing.JTextField email1txt;
+    private javax.swing.JTextField emailtxt;
+    private javax.swing.JTextField engGradetxt;
+    private javax.swing.JTextField facultyIdtxt;
+    private javax.swing.JTextField facultyIdtxt1;
+    private javax.swing.JTextField indexNo1txt;
+    private javax.swing.JTextField indexNotxt;
+    private javax.swing.JTextField insitutetxt;
+    private javax.swing.JTextField inslandRanktxt;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -456,7 +610,15 @@ public class StudentReg extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -475,35 +637,29 @@ public class StudentReg extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField15;
-    private javax.swing.JTextField jTextField16;
-    private javax.swing.JTextField jTextField18;
-    private javax.swing.JTextField jTextField19;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField20;
-    private javax.swing.JTextField jTextField21;
-    private javax.swing.JTextField jTextField22;
-    private javax.swing.JTextField jTextField23;
-    private javax.swing.JTextField jTextField24;
-    private javax.swing.JTextField jTextField25;
-    private javax.swing.JTextField jTextField26;
-    private javax.swing.JTextField jTextField27;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
-    private javax.swing.JButton submitbtn;
-    private javax.swing.JButton submitbtnpostbtn;
+    private javax.swing.JTextField mobile1txt;
+    private javax.swing.JTextField mobiletxt;
+    private javax.swing.JTextField nameWithInitials1txt;
+    private javax.swing.JTextField nameWithInitialstxt;
+    private javax.swing.JTextField nic1txt1;
+    private javax.swing.JTextField nictxt1;
+    private javax.swing.JPasswordField passwordtxt;
+    private javax.swing.JPasswordField passwordtxt1;
+    private javax.swing.JButton postSubmitbtnpostbtn;
+    private javax.swing.JTextField qualificationTypetxt;
+    private javax.swing.JTextField qualificationtxt;
+    private javax.swing.JTextField regNo1txt;
+    private javax.swing.JTextField regNotxt;
+    private javax.swing.JTextField subGrade1txt;
+    private javax.swing.JTextField subGrade2txt;
+    private javax.swing.JTextField subGrade3txt;
+    private javax.swing.JTextField subName1txt;
+    private javax.swing.JTextField subName2txt;
+    private javax.swing.JTextField subName3txt;
+    private javax.swing.JButton underSubmitbtn;
+    private javax.swing.JTextField userName1txt;
+    private javax.swing.JTextField userNametxt;
+    private javax.swing.JTextField zScoretxt;
     // End of variables declaration//GEN-END:variables
 
    /* private void newS_id(){
