@@ -12,31 +12,21 @@ package model;
 public class PostgraduateStudentResultModel {
     
     String subjectCode;
-    String subjectName;
-    String regNo;
-    String studentName;
-    int result;
-    String Grade;
-    int numberOfCredit;
+    String attempt;
+    String year;
+    String indexNo;
+    int marks;
+    String grade;
+    String  attemptYearIndexNo;
 
-    public PostgraduateStudentResultModel(String subjectCode, String subjectName, String regNo, String studentName, int result, String Grade, int numberOfCredit) {
+    public PostgraduateStudentResultModel(String subjectCode, String attempt, String year, String indexNo, int marks, String grade, String attemptYearIndexNo) {
         this.subjectCode = subjectCode;
-        this.subjectName = subjectName;
-        this.regNo = regNo;
-        this.studentName = studentName;
-        this.result = result;
-        this.Grade = Grade;
-        this.numberOfCredit = numberOfCredit;
-    }
-    
-    public PostgraduateStudentResultModel(String subjectCode, String regNo, int result, String Grade, int numberOfCredit) {
-        this.subjectCode = subjectCode;
-        
-        this.regNo = regNo;
-       
-        this.result = result;
-        this.Grade = Grade;
-        this.numberOfCredit = numberOfCredit;
+        this.attempt = attempt;
+        this.year = year;
+        this.indexNo = indexNo;
+        this.marks = marks;
+        this.grade = grade;
+        this.attemptYearIndexNo = attemptYearIndexNo;
     }
 
     public String getSubjectCode() {
@@ -47,55 +37,54 @@ public class PostgraduateStudentResultModel {
         this.subjectCode = subjectCode;
     }
 
-    public String getSubjectName() {
-        return subjectName;
+    public String getAttempt() {
+        return attempt;
     }
 
-    public void setSubjectName(String subjectName) {
-        this.subjectName = subjectName;
+    public void setAttempt(String attempt) {
+        this.attempt = attempt;
     }
 
-    public String getRegNo() {
-        return regNo;
+    public String getYear() {
+        return year;
     }
 
-    public void setRegNo(String regNo) {
-        this.regNo = regNo;
+    public void setYear(String year) {
+        this.year = year;
     }
 
-    public String getStudentName() {
-        return studentName;
+    public String getIndexNo() {
+        return indexNo;
     }
 
-    public void setStudentName(String studentName) {
-        this.studentName = studentName;
+    public void setIndexNo(String indexNo) {
+        this.indexNo = indexNo;
     }
 
-    public int getResult() {
-        return result;
+    public int getMarks() {
+        return marks;
     }
 
-    public void setResult(int result) {
-        this.result = result;
+    public void setMarks(int marks) {
+        this.marks = marks;
     }
 
     public String getGrade() {
-        return Grade;
+        return grade;
     }
 
-    public void setGrade(String Grade) {
-        this.Grade = Grade;
+    public void setGrade(String grade) {
+        this.grade = grade;
     }
 
-    public int getNumberOfCredit() {
-        return numberOfCredit;
+    public String getAttemptYearIndexNo() {
+        return attemptYearIndexNo;
     }
 
-    public void setNumberOfCredit(int numberOfCredit) {
-        this.numberOfCredit = numberOfCredit;
+    public void setAttemptYearIndexNo(String attemptYearIndexNo) {
+        this.attemptYearIndexNo = attemptYearIndexNo;
     }
     
     
-    
-    
+
 }

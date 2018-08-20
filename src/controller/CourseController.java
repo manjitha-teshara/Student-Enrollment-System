@@ -11,6 +11,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import model.CourseModel;
+import model.PostgraduateStudentResultModel;
 import view.Course;
 
 /**
@@ -43,19 +44,7 @@ public class CourseController {
         return  stm.executeUpdate();
      
      }
-     /*public static Customer searchCustomer(String id) throws ClassNotFoundException, SQLException {
-        String sql = "Select * From Customer where id=?";
-        Connection conn = DBConnection.getDBConnection().getConnection();
-        PreparedStatement stm = conn.prepareStatement(sql);
-        stm.setObject(1, id);
-        ResultSet rst = stm.executeQuery();
-        if(rst.next()){
-            Customer customer=new Customer(rst.getString("id"),rst.getString("name"),rst.getString("address"),rst.getDouble("salary"));
-            return customer;
-        }else{
-            return null;
-        }
-    }*/
+    
      public static CourseModel searchCourse(String id) throws ClassNotFoundException,SQLException {
          String sql="SELECT * FROM course where courseId=?";
           Connection conn = DBConnection.getDBConnection().getConnection();
@@ -72,13 +61,7 @@ public class CourseController {
           }
          
      }
-     /*public static int deleteCustomer(String id) throws ClassNotFoundException, SQLException {
-        String sql = "Delete From Customer where id=?";
-        Connection conn = DBConnection.getDBConnection().getConnection();
-        PreparedStatement stm = conn.prepareStatement(sql);
-        stm.setObject(1, id);
-        return  stm.executeUpdate();
-    } */
+    
      public static int deleteCourse(String id) throws ClassNotFoundException,SQLException{
          String sql="Delete From course where courseId=?";
          Connection conn = DBConnection.getDBConnection().getConnection();
@@ -87,5 +70,7 @@ public class CourseController {
         return  stm.executeUpdate();
          
      }
+
+   
     
 }

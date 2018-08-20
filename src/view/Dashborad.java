@@ -31,10 +31,8 @@ public class Dashborad extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         subjectDetailbtn = new javax.swing.JButton();
         semesterDetail = new javax.swing.JButton();
-        courseDetailbtn = new javax.swing.JButton();
         enrollCoursebtn = new javax.swing.JButton();
         registerbtn = new javax.swing.JButton();
-        facultybtn = new javax.swing.JButton();
         paymentbtn1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -42,6 +40,11 @@ public class Dashborad extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         mangeResultbtn = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        facultybtn = new javax.swing.JButton();
+        courseDetailbtn = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -63,7 +66,7 @@ public class Dashborad extends javax.swing.JFrame {
                 subjectDetailbtnActionPerformed(evt);
             }
         });
-        jPanel2.add(subjectDetailbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 50, 200, 200));
+        jPanel2.add(subjectDetailbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 60, 200, 200));
 
         semesterDetail.setBackground(new java.awt.Color(61, 196, 226));
         semesterDetail.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/semesterv1.png"))); // NOI18N
@@ -73,17 +76,7 @@ public class Dashborad extends javax.swing.JFrame {
                 semesterDetailActionPerformed(evt);
             }
         });
-        jPanel2.add(semesterDetail, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 50, 200, 200));
-
-        courseDetailbtn.setBackground(new java.awt.Color(61, 196, 226));
-        courseDetailbtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/degree-certificate-iconv2.png"))); // NOI18N
-        courseDetailbtn.setMaximumSize(new java.awt.Dimension(100, 100));
-        courseDetailbtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                courseDetailbtnActionPerformed(evt);
-            }
-        });
-        jPanel2.add(courseDetailbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, 200, 200));
+        jPanel2.add(semesterDetail, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 330, 200, 200));
 
         enrollCoursebtn.setBackground(new java.awt.Color(61, 196, 226));
         enrollCoursebtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/course enrollv1.png"))); // NOI18N
@@ -93,7 +86,7 @@ public class Dashborad extends javax.swing.JFrame {
                 enrollCoursebtnActionPerformed(evt);
             }
         });
-        jPanel2.add(enrollCoursebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 200, 200));
+        jPanel2.add(enrollCoursebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, 200, 200));
 
         registerbtn.setBackground(new java.awt.Color(61, 196, 226));
         registerbtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/registerv2.png"))); // NOI18N
@@ -104,16 +97,6 @@ public class Dashborad extends javax.swing.JFrame {
             }
         });
         jPanel2.add(registerbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 340, 200, 200));
-
-        facultybtn.setBackground(new java.awt.Color(61, 196, 226));
-        facultybtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/facultyv2.png"))); // NOI18N
-        facultybtn.setText("Faculty");
-        facultybtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                facultybtnActionPerformed(evt);
-            }
-        });
-        jPanel2.add(facultybtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 50, 200, 200));
 
         paymentbtn1.setBackground(new java.awt.Color(61, 196, 226));
         paymentbtn1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/payemntv1.png"))); // NOI18N
@@ -129,18 +112,19 @@ public class Dashborad extends javax.swing.JFrame {
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 560, 180, -1));
 
         jLabel3.setText("Manage Subject");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 270, 180, -1));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 280, 180, -1));
 
         jLabel4.setText("Manage Semester");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 280, 180, -1));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 550, 180, -1));
 
         jLabel5.setText("Make Payement");
         jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 560, 200, -1));
 
         jLabel6.setText("Enroll with Course");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 560, 190, -1));
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, 190, -1));
 
         mangeResultbtn.setBackground(new java.awt.Color(61, 196, 226));
+        mangeResultbtn.setIcon(new javax.swing.ImageIcon("C:\\Users\\manji\\OneDrive\\Documents\\images logo\\RESULT1.png")); // NOI18N
         mangeResultbtn.setText("Manage Result");
         mangeResultbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -148,6 +132,35 @@ public class Dashborad extends javax.swing.JFrame {
             }
         });
         jPanel2.add(mangeResultbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 330, 200, 200));
+
+        jLabel7.setText("Manage Result");
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 550, -1, -1));
+
+        facultybtn.setBackground(new java.awt.Color(61, 196, 226));
+        facultybtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/facultyv2.png"))); // NOI18N
+        facultybtn.setText("Faculty");
+        facultybtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                facultybtnActionPerformed(evt);
+            }
+        });
+        jPanel2.add(facultybtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 60, 200, 200));
+
+        courseDetailbtn.setBackground(new java.awt.Color(61, 196, 226));
+        courseDetailbtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/degree-certificate-iconv2.png"))); // NOI18N
+        courseDetailbtn.setMaximumSize(new java.awt.Dimension(100, 100));
+        courseDetailbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                courseDetailbtnActionPerformed(evt);
+            }
+        });
+        jPanel2.add(courseDetailbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 60, 200, 200));
+
+        jLabel8.setText("Manage Degree");
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 280, -1, -1));
+
+        jLabel9.setText("Manage Faculty");
+        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 280, -1, -1));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 197, 1370, 600));
 
@@ -233,7 +246,9 @@ public class Dashborad extends javax.swing.JFrame {
     }//GEN-LAST:event_paymentbtn1ActionPerformed
 
     private void mangeResultbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mangeResultbtnActionPerformed
-       
+        ChooseStudentType chooseStudentType=new ChooseStudentType();
+        chooseStudentType.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_mangeResultbtnActionPerformed
 
     /**
@@ -296,6 +311,9 @@ public class Dashborad extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
