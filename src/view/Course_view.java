@@ -66,21 +66,21 @@ public class Course_view extends javax.swing.JFrame {
         jPanel7.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel3.setText("Course Number");
+        jLabel3.setText("Course Code");
         jPanel7.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setText("Course Codinater");
         jPanel7.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
-        jPanel7.add(courseNametxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 50, 100, -1));
-        jPanel7.add(courseIdtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 100, -1));
+        jPanel7.add(courseNametxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 50, 480, -1));
+        jPanel7.add(courseIdtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 480, -1));
 
         courseCodinatertxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 courseCodinatertxtActionPerformed(evt);
             }
         });
-        jPanel7.add(courseCodinatertxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, 100, -1));
+        jPanel7.add(courseCodinatertxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, 480, -1));
 
         searchbtn.setBackground(new java.awt.Color(49, 144, 176));
         searchbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -90,7 +90,7 @@ public class Course_view extends javax.swing.JFrame {
                 searchbtnActionPerformed(evt);
             }
         });
-        jPanel7.add(searchbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 50, 100, -1));
+        jPanel7.add(searchbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 50, 100, -1));
 
         jButton2.setBackground(new java.awt.Color(49, 144, 176));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -186,7 +186,7 @@ public class Course_view extends javax.swing.JFrame {
         course.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_addCoursebtnActionPerformed
-
+//public CourseModel(String courseName, String courseId, String courseCodinater, double semesterFees) 
     private void searchbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchbtnActionPerformed
         String courseId=courseIdtxt.getText();
         

@@ -87,7 +87,7 @@
                 </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="Postgraduatestudent Result&#xa;">
+                    <TitledBorder title="Postgraduate Student Result ">
                       <Font PropertyName="font" name="Tahoma" size="18" style="0"/>
                       <Color PropertyName="color" blue="9d" green="58" red="19" type="rgb"/>
                     </TitledBorder>

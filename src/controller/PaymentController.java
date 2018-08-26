@@ -18,17 +18,7 @@ import model.PaymentModel;
  */
 public class PaymentController {
     
-    /* public static int addCourse(CourseModel course) throws ClassNotFoundException, SQLException {
-        String sql = "Insert into course values(?,?,?,?)";
-        Connection conn = DBConnection.getDBConnection().getConnection();
-        PreparedStatement stm = conn.prepareStatement(sql);
-        stm.setObject(1, course.getCourseId());
-        stm.setObject(2, course.getCourseName());
-        stm.setObject(3, course.getCourseCodinater());
-        stm.setObject(4, course.getSemesterFees());
-        return  stm.executeUpdate();
-        
-    }*/
+  
     
     public static int addPayemnt(PaymentModel paymentModel) throws ClassNotFoundException,SQLException{
         String sql="INSERT INTO payment VALUES(?,?,?,?,?,?)";
@@ -58,7 +48,8 @@ public class PaymentController {
      
      }
     /*    public PaymentModel(String resitNo, String nameWithIntials, String regNo, String indexNo, Double value, String semesterId) {
-*/
+*///    public PaymentModel(String resitNo, String nameWithIntials, String regNo, String indexNo, Double value, String semesterId) {
+
     public static PaymentModel searchPayment(String id) throws ClassNotFoundException,SQLException {
          String sql="SELECT * FROM payment where resitNo=?";
           Connection conn = DBConnection.getDBConnection().getConnection();
@@ -67,7 +58,7 @@ public class PaymentController {
           ResultSet rst=stm.executeQuery();
           if(rst.next()){
               PaymentModel paymentModel=new PaymentModel(rst.getString("resitNo"),rst.getString("nameWithIntials"),
-                      rst.getString("regNo"),rst.getString("indexNo"),rst.getDouble("semesterFees"),rst.getString("semesterId"));
+                      rst.getString("regNo"),rst.getString("indexNo"),rst.getDouble("value"),rst.getString("semesterId"));
               return paymentModel;
           }
           else{

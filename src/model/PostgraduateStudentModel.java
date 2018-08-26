@@ -27,7 +27,7 @@ public class PostgraduateStudentModel {
     String courseId;
     String password;
 
-    public PostgraduateStudentModel(String nameWithIntials, String userName, String regNo, String indexNo, String admission, String email, String mobile, String nic, String address, String insitute, String qualificationType, String qualification, String facultyId, String courseId, String password) {
+    public PostgraduateStudentModel(String nameWithIntials, String userName, String regNo, String indexNo, String admission, String email, String mobile, String nic, String address, String insitute, String qualificationType, String qualification, String facultyId,String password, String courseId) {
         this.nameWithIntials = nameWithIntials;
         this.userName = userName;
         this.regNo = regNo;

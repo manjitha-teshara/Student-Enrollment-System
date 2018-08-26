@@ -61,7 +61,7 @@ public class Register_users extends javax.swing.JFrame {
         jPanel1.add(instroucterbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 70, 200, 200));
 
         lecturebtn.setBackground(new java.awt.Color(49, 144, 176));
-        lecturebtn.setIcon(new javax.swing.ImageIcon("C:\\Users\\manji\\OneDrive\\Documents\\lecturev1.png")); // NOI18N
+        lecturebtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lecturev1.png"))); // NOI18N
         lecturebtn.setText("Lectures");
         lecturebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -67,7 +67,7 @@ public class SubjectController {
           stm.setObject(1, id);
           ResultSet rst=stm.executeQuery();
           if(rst.next()){
-              SubjectModel subjectModel=new SubjectModel(rst.getString("subjectCode"),rst.getString("subjectName"),
+              SubjectModel subjectModel=new SubjectModel(rst.getString("subjectName"),rst.getString("subjectCode"),
                       rst.getString("superviser"),rst.getString("instroucter1"),rst.getString("instroucter2"),rst.getInt("numberOfCredit"),rst.getInt("numberOfAssignment"));
               return subjectModel;
           }

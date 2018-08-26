@@ -40,6 +40,10 @@ public class AllSubjectView extends javax.swing.JFrame {
         subject_1List = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : subject_1Query.getResultList();
         subject_1Query1 = java.beans.Beans.isDesignTime() ? null : nsbmsystemPUEntityManager.createQuery("SELECT s FROM Subject_1 s");
         subject_1List1 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : subject_1Query1.getResultList();
+        subject_1Query2 = java.beans.Beans.isDesignTime() ? null : nsbmsystemPUEntityManager.createQuery("SELECT s FROM Subject_1 s");
+        subject_1List2 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : subject_1Query2.getResultList();
+        subject_1Query3 = java.beans.Beans.isDesignTime() ? null : nsbmsystemPUEntityManager.createQuery("SELECT s FROM Subject_1 s");
+        subject_1List3 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : subject_1Query3.getResultList();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
@@ -98,7 +102,7 @@ public class AllSubjectView extends javax.swing.JFrame {
         jTable1.setBackground(new java.awt.Color(242, 255, 204));
         jTable1.setGridColor(new java.awt.Color(242, 255, 204));
 
-        org.jdesktop.swingbinding.JTableBinding jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, subject_1List1, jTable1);
+        org.jdesktop.swingbinding.JTableBinding jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, subject_1List3, jTable1);
         org.jdesktop.swingbinding.JTableBinding.ColumnBinding columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${subjectCode}"));
         columnBinding.setColumnName("Subject Code");
         columnBinding.setColumnClass(String.class);
@@ -289,8 +293,12 @@ public class AllSubjectView extends javax.swing.JFrame {
     private javax.swing.JButton searchbtn;
     private java.util.List<view.Subject_1> subject_1List;
     private java.util.List<view.Subject_1> subject_1List1;
+    private java.util.List<view.Subject_1> subject_1List2;
+    private java.util.List<view.Subject_1> subject_1List3;
     private javax.persistence.Query subject_1Query;
     private javax.persistence.Query subject_1Query1;
+    private javax.persistence.Query subject_1Query2;
+    private javax.persistence.Query subject_1Query3;
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 }

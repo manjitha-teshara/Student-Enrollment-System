@@ -45,7 +45,7 @@ public class PostgraduateController {
     }
     
     public static int editPostStudent(PostgraduateStudentModel postgraduateStudentModel) throws ClassNotFoundException,SQLException{
-     String sql="UPDATE postgraduatestudent set nameWithIntials=?,userName=?,indexNo=?,admission=?,email=?,mobile=?,nic=?,address=?,insitute=?,qualificationType=?,qualification=?,password=? where regNo=?";
+     String sql="UPDATE postgraduatestudent set nameWithIntials=?,userName=?,indexNo=?,admission=?,email=?,mobile=?,nic=?,address=?,insitute=?,qualificationType=?,qualification=?,password=?,facultyId=?,courseId=? where regNo=?";
      //String sql="UPDATE postgraduatestudent set courseName=?,courseCodinater=?,semesterFees=? where courseId=?";
      Connection conn = DBConnection.getDBConnection().getConnection();
      PreparedStatement stm = conn.prepareStatement(sql);
@@ -62,7 +62,9 @@ public class PostgraduateController {
      stm.setObject(10, postgraduateStudentModel.getQualificationType());
      stm.setObject(11, postgraduateStudentModel.getQualification());
      stm.setObject(12, postgraduateStudentModel.getPassword());
-     stm.setObject(13, postgraduateStudentModel.getRegNo());
+     stm.setObject(13, postgraduateStudentModel.getFacultyId());
+     stm.setObject(14, postgraduateStudentModel.getCourseId());
+     stm.setObject(15, postgraduateStudentModel.getRegNo());
         return  stm.executeUpdate();
      
      }

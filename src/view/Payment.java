@@ -5,9 +5,11 @@
  */
 package view;
 
-import controller.CourseController;
+
 import controller.PaymentController;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import model.PaymentModel;
 
@@ -138,11 +140,21 @@ public class Payment extends javax.swing.JFrame {
         deletebtn.setBackground(new java.awt.Color(49, 144, 176));
         deletebtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         deletebtn.setText("Delete");
+        deletebtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deletebtnActionPerformed(evt);
+            }
+        });
         jPanel7.add(deletebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 390, 100, -1));
 
         editbtn.setBackground(new java.awt.Color(49, 144, 176));
         editbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         editbtn.setText("Edit");
+        editbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editbtnActionPerformed(evt);
+            }
+        });
         jPanel7.add(editbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 390, 100, -1));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -217,6 +229,8 @@ public class Payment extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, ex.getMessage());
 
         }
+        catch (Exception e){}
+     
     }//GEN-LAST:event_submitbtnActionPerformed
 
     private void SearchbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchbtnActionPerformed
@@ -234,15 +248,72 @@ public class Payment extends javax.swing.JFrame {
                 
                
             } else {
-                JOptionPane.showMessageDialog(this, "No Such Course ");
+                JOptionPane.showMessageDialog(this, "No Such payment ");
             }        }
         catch (ClassNotFoundException ex) {
+            JOptionPane.showMessageDialog(this, "No Driver found");
+        } catch (SQLException ex) {
+           JOptionPane.showMessageDialog(this, ex.getMessage());
+           System.out.println(ex);
+        }
+                catch (Exception e){}
+
+    }//GEN-LAST:event_SearchbtnActionPerformed
+
+    private void editbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editbtnActionPerformed
+     
+       
+       String nameWithIntials=nameWithIntialstxt.getText();
+       String regNo=studentRegNotxt.getText();
+       String indexNo=studentIndexNotxt.getText();
+       String resitNo=resitNotxt.getText();
+       Double value=Double.parseDouble(valuetxt.getText());
+       String semesterId=semesterIdtxt.getText();
+       
+       PaymentModel paymentModel=new PaymentModel(resitNo, nameWithIntials, regNo, indexNo, value, semesterId);
+       try {
+            int res=PaymentController.editPayment(paymentModel);
+            if(res>0){
+                JOptionPane.showMessageDialog(this, "Update Success");
+            }
+            
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Payment.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(Payment.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       
+    }//GEN-LAST:event_editbtnActionPerformed
+
+    private void deletebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deletebtnActionPerformed
+       /*
+         String id=courseIdtxt.getText();
+         try {
+            int res = CourseController.deleteCourse(id);
+            if (res > 0) {
+                JOptionPane.showMessageDialog(this, "Delete Success ");
+            } else {
+                JOptionPane.showMessageDialog(this, "Delete Fail ");
+            }    
+         }catch (ClassNotFoundException ex) {
             JOptionPane.showMessageDialog(this, "No Driver found");
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(this, ex.getMessage());
 
         }
-    }//GEN-LAST:event_SearchbtnActionPerformed
+     */
+       String id=resitNotxt.getText();
+       try{
+           int res=PaymentController.deletePayment(id);
+           if (res > 0) {
+                JOptionPane.showMessageDialog(this, "Delete Success ");
+            } else {
+                JOptionPane.showMessageDialog(this, "Delete Fail ");
+            } 
+       }catch(Exception e){
+           System.out.println(e);
+       }
+    }//GEN-LAST:event_deletebtnActionPerformed
 
     private void datetebtnActionPerformed(java.awt.event.ActionEvent evt) {                                          
         String id=resitNotxt.getText();

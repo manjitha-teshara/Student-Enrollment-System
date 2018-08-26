@@ -10,6 +10,7 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 import model.CourseModel;
 
 /**
@@ -18,6 +19,7 @@ import model.CourseModel;
  */
 public class AllCourseView extends javax.swing.JFrame {
 
+    DefaultTableModel dtm;
  
     public AllCourseView() {
         initComponents();
@@ -35,6 +37,7 @@ public class AllCourseView extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
         nsbmsystemPUEntityManager = java.beans.Beans.isDesignTime() ? null : javax.persistence.Persistence.createEntityManagerFactory("nsbmsystemPU").createEntityManager();
         course_1Query = java.beans.Beans.isDesignTime() ? null : nsbmsystemPUEntityManager.createQuery("SELECT c FROM Course_1 c");
@@ -53,11 +56,15 @@ public class AllCourseView extends javax.swing.JFrame {
         course_1List6 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : course_1Query6.getResultList();
         faculty_1Query = java.beans.Beans.isDesignTime() ? null : nsbmsystemPUEntityManager.createQuery("SELECT f FROM Faculty_1 f");
         faculty_1List = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : faculty_1Query.getResultList();
+        course_1Query7 = java.beans.Beans.isDesignTime() ? null : nsbmsystemPUEntityManager.createQuery("SELECT c FROM Course_1 c");
+        course_1List7 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : course_1Query7.getResultList();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
         backbtn = new javax.swing.JButton();
         cancelbtn = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        table = new javax.swing.JTable();
         jPanel5 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -94,6 +101,25 @@ public class AllCourseView extends javax.swing.JFrame {
             }
         });
         jPanel7.add(cancelbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 380, 100, -1));
+
+        org.jdesktop.swingbinding.JTableBinding jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, course_1List7, table);
+        org.jdesktop.swingbinding.JTableBinding.ColumnBinding columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${courseId}"));
+        columnBinding.setColumnName("Course Id");
+        columnBinding.setColumnClass(String.class);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${courseName}"));
+        columnBinding.setColumnName("Course Name");
+        columnBinding.setColumnClass(String.class);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${courseCodinater}"));
+        columnBinding.setColumnName("Course Codinater");
+        columnBinding.setColumnClass(String.class);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${semesterFees}"));
+        columnBinding.setColumnName("Semester Fees");
+        columnBinding.setColumnClass(java.math.BigDecimal.class);
+        bindingGroup.addBinding(jTableBinding);
+        jTableBinding.bind();
+        jScrollPane1.setViewportView(table);
+
+        jPanel7.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, -1, 280));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -145,6 +171,8 @@ public class AllCourseView extends javax.swing.JFrame {
         jPanel3.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 22, 840, 120));
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 590));
+
+        bindingGroup.bind();
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -209,6 +237,7 @@ public class AllCourseView extends javax.swing.JFrame {
     private java.util.List<view.Course_1> course_1List4;
     private java.util.List<view.Course_1> course_1List5;
     private java.util.List<view.Course_1> course_1List6;
+    private java.util.List<view.Course_1> course_1List7;
     private javax.persistence.Query course_1Query;
     private javax.persistence.Query course_1Query1;
     private javax.persistence.Query course_1Query2;
@@ -216,6 +245,7 @@ public class AllCourseView extends javax.swing.JFrame {
     private javax.persistence.Query course_1Query4;
     private javax.persistence.Query course_1Query5;
     private javax.persistence.Query course_1Query6;
+    private javax.persistence.Query course_1Query7;
     private java.util.List<view.Faculty_1> faculty_1List;
     private javax.persistence.Query faculty_1Query;
     private javax.swing.JLabel jLabel1;
@@ -224,7 +254,10 @@ public class AllCourseView extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.persistence.EntityManager nsbmsystemPUEntityManager;
+    private javax.swing.JTable table;
+    private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 
     /**
@@ -240,4 +273,7 @@ public class AllCourseView extends javax.swing.JFrame {
     /**
      * @return the courseIdtxt
      */
+    
+    
+    
 }

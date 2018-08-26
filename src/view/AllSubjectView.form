@@ -43,6 +43,42 @@
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;view.Subject_1&gt;"/>
       </AuxValues>
     </Component>
+    <Component class="javax.persistence.Query" name="subject_1Query2">
+      <Properties>
+        <Property name="query" type="java.lang.String" value="SELECT s FROM Subject_1 s"/>
+        <Property name="entityManager" type="java.lang.Object" editor="org.netbeans.modules.form.j2ee.J2EEPropertyModifier$EMProperty$EntityManagerEditor">
+          <ComponentRef name="nsbmsystemPUEntityManager"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="java.util.List" name="subject_1List2">
+      <Properties>
+        <Property name="query" type="java.lang.Object" editor="org.netbeans.modules.form.j2ee.J2EEPropertyModifier$QueryBeanProperty$QueryEditor">
+          <ComponentRef name="subject_1Query2"/>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;view.Subject_1&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.persistence.Query" name="subject_1Query3">
+      <Properties>
+        <Property name="query" type="java.lang.String" value="SELECT s FROM Subject_1 s"/>
+        <Property name="entityManager" type="java.lang.Object" editor="org.netbeans.modules.form.j2ee.J2EEPropertyModifier$EMProperty$EntityManagerEditor">
+          <ComponentRef name="nsbmsystemPUEntityManager"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="java.util.List" name="subject_1List3">
+      <Properties>
+        <Property name="query" type="java.lang.Object" editor="org.netbeans.modules.form.j2ee.J2EEPropertyModifier$QueryBeanProperty$QueryEditor">
+          <ComponentRef name="subject_1Query3"/>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;view.Subject_1&gt;"/>
+      </AuxValues>
+    </Component>
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
@@ -224,7 +260,7 @@
                         </Property>
                       </Properties>
                       <BindingProperties>
-                        <BindingProperty name="elements" source="subject_1List1" target="jTable1" targetPath="elements" updateStrategy="0" immediately="true">
+                        <BindingProperty name="elements" source="subject_1List3" target="jTable1" targetPath="elements" updateStrategy="0" immediately="true">
                           <Subbinding sourcePath="${subjectCode}">
                             <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
                           </Subbinding>

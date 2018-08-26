@@ -44,7 +44,7 @@ public class CourseController {
         return  stm.executeUpdate();
      
      }
-    
+    //public CourseModel(String courseName, String courseId, String courseCodinater, double semesterFees) 
      public static CourseModel searchCourse(String id) throws ClassNotFoundException,SQLException {
          String sql="SELECT * FROM course where courseId=?";
           Connection conn = DBConnection.getDBConnection().getConnection();
@@ -52,7 +52,7 @@ public class CourseController {
           stm.setObject(1, id);
           ResultSet rst=stm.executeQuery();
           if(rst.next()){
-              CourseModel courseModel=new CourseModel(rst.getString("courseId"),rst.getString("courseName"),
+              CourseModel courseModel=new CourseModel(rst.getString("courseName"),rst.getString("courseId"),
                       rst.getString("courseCodinater"),rst.getDouble("semesterFees"));
               return courseModel;
           }

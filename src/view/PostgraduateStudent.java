@@ -69,8 +69,7 @@ public class PostgraduateStudent extends javax.swing.JFrame {
         editbtn = new javax.swing.JButton();
         datetebtn = new javax.swing.JButton();
         submitbtn = new javax.swing.JButton();
-        cancelbtn = new javax.swing.JButton();
-        backbtn = new javax.swing.JButton();
+        addSubjectbtn = new javax.swing.JButton();
         jLabel19 = new javax.swing.JLabel();
         addmissiontxt = new javax.swing.JTextField();
         jLabel25 = new javax.swing.JLabel();
@@ -79,6 +78,7 @@ public class PostgraduateStudent extends javax.swing.JFrame {
         facultyId = new javax.swing.JLabel();
         qualificationtxt1 = new javax.swing.JTextField();
         facultyIdtxt = new javax.swing.JTextField();
+        backbtn1 = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
 
@@ -141,7 +141,7 @@ public class PostgraduateStudent extends javax.swing.JFrame {
         addresstxt.setRows(5);
         jScrollPane2.setViewportView(addresstxt);
 
-        jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 260, 170, -1));
+        jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 260, 160, -1));
 
         jLabel23.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel23.setText("Insitute");
@@ -176,7 +176,7 @@ public class PostgraduateStudent extends javax.swing.JFrame {
                 editbtnActionPerformed(evt);
             }
         });
-        jPanel2.add(editbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 340, 80, -1));
+        jPanel2.add(editbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 340, 80, -1));
 
         datetebtn.setBackground(new java.awt.Color(49, 144, 176));
         datetebtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -186,7 +186,7 @@ public class PostgraduateStudent extends javax.swing.JFrame {
                 datetebtnActionPerformed(evt);
             }
         });
-        jPanel2.add(datetebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 340, 80, -1));
+        jPanel2.add(datetebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 340, 80, -1));
 
         submitbtn.setBackground(new java.awt.Color(49, 144, 176));
         submitbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -196,17 +196,17 @@ public class PostgraduateStudent extends javax.swing.JFrame {
                 submitbtnActionPerformed(evt);
             }
         });
-        jPanel2.add(submitbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 340, 90, -1));
+        jPanel2.add(submitbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 340, 90, -1));
 
-        cancelbtn.setBackground(new java.awt.Color(49, 144, 176));
-        cancelbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        cancelbtn.setText("Cancel");
-        jPanel2.add(cancelbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 340, 80, -1));
-
-        backbtn.setBackground(new java.awt.Color(49, 144, 176));
-        backbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        backbtn.setText("Back");
-        jPanel2.add(backbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 340, 80, -1));
+        addSubjectbtn.setBackground(new java.awt.Color(49, 144, 176));
+        addSubjectbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        addSubjectbtn.setText("Add Subject");
+        addSubjectbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addSubjectbtnActionPerformed(evt);
+            }
+        });
+        jPanel2.add(addSubjectbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 340, 120, -1));
 
         jLabel19.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel19.setText("Address");
@@ -229,6 +229,11 @@ public class PostgraduateStudent extends javax.swing.JFrame {
         jPanel2.add(facultyId, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 140, -1, 30));
         jPanel2.add(qualificationtxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 110, 100, -1));
         jPanel2.add(facultyIdtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 140, 100, -1));
+
+        backbtn1.setBackground(new java.awt.Color(49, 144, 176));
+        backbtn1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        backbtn1.setText("Back");
+        jPanel2.add(backbtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 340, 80, -1));
 
         jPanel7.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 845, 490));
 
@@ -294,7 +299,7 @@ public class PostgraduateStudent extends javax.swing.JFrame {
         String courseId=courseIdtxt.getText();
         String password=passwordtxt.getText();
         
-       PostgraduateStudentModel postgraduateStudentModel=new PostgraduateStudentModel(nameWithInitials, userName, regNo, indexNo, addmissionDate, email, mobile, nic, address, institute, qualificationType, qualification, faculty, courseId, password);
+       PostgraduateStudentModel postgraduateStudentModel=new PostgraduateStudentModel(nameWithInitials, userName, regNo, indexNo, addmissionDate, email, mobile, nic, address, institute, qualificationType, qualification, faculty,password, courseId);
        
        //int res;
        int res = 0;
@@ -350,7 +355,7 @@ public class PostgraduateStudent extends javax.swing.JFrame {
         String courseId=courseIdtxt.getText();
         String password=passwordtxt.getText();
         
-       PostgraduateStudentModel postgraduateStudentModel=new PostgraduateStudentModel(nameWithInitials, userName, regNo, indexNo, addmissionDate, email, mobile, nic, address, institute, qualificationType, qualification, faculty, courseId, password);
+       PostgraduateStudentModel postgraduateStudentModel=new PostgraduateStudentModel(nameWithInitials, userName, regNo, indexNo, addmissionDate, email, mobile, nic, address, institute, qualificationType, qualification, faculty,password, courseId);
        try{
            int res=PostgraduateController.editPostStudent(postgraduateStudentModel);
             if(res>0){
@@ -403,6 +408,12 @@ public class PostgraduateStudent extends javax.swing.JFrame {
        
     }//GEN-LAST:event_searchbtnActionPerformed
 
+    private void addSubjectbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addSubjectbtnActionPerformed
+        AddSubjectToStudent addSubjectToStudent=new AddSubjectToStudent();
+        addSubjectToStudent.setVisible(true);
+        
+    }//GEN-LAST:event_addSubjectbtnActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -446,11 +457,11 @@ public class PostgraduateStudent extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton addSubjectbtn;
     private javax.swing.JTextField addmissiontxt;
     private javax.swing.JTextArea addresstxt;
-    private javax.swing.JButton backbtn;
+    private javax.swing.JButton backbtn1;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton cancelbtn;
     private javax.swing.JTextField courseIdtxt;
     private javax.swing.JButton datetebtn;
     private javax.swing.JButton editbtn;

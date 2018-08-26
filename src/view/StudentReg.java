@@ -458,15 +458,16 @@ public class StudentReg extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel1MouseClicked
 
     private void underSubmitbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_underSubmitbtnActionPerformed
-        String nameWithIntials=nameWithInitials1txt.getText();
-        String userName=userName1txt.getText();
-        String regNo=regNo1txt.getText();
-        String indexNo=indexNo1txt.getText();
-        String admission=admissionDate1txt.getText();
-        String email=email1txt.getText();
-        String mobile=mobile1txt.getText();
-        String nic=admissionDate1txt.getText();
-        String address=address1txt.getText();
+        
+        String nameWithIntials=nameWithInitialstxt.getText();
+        String userName=userNametxt.getText();
+        String regNo=regNotxt.getText();
+        String indexNo=indexNotxt.getText();
+        String admission=admissionDatetxt.getText();
+        String email=emailtxt.getText();
+        String mobile=mobiletxt.getText();
+        String nic=admissionDatetxt.getText();
+        String address=addresstxt.getText();
         String subName1=subName1txt.getText();
         String subGrade1=subGrade1txt.getText();
         String subName2=subName2txt.getText();
@@ -478,20 +479,21 @@ public class StudentReg extends javax.swing.JFrame {
         String courseId=courseIdtxt.getText();
         String password=passwordtxt.getText();
         UndergraduateStudentModel undergraduateStudentModel=new UndergraduateStudentModel(nameWithIntials, userName, regNo, indexNo, admission, email, mobile, nic, address, subName1, subGrade1, subName2, subGrade1, subName3, subGrade1, engGrade, isislandRank, zScore, facultyId, courseId, password);
+//    public UndergraduateStudentModel(String nameWithIntials, String userName, String regNo, String indexNo, String admission, String email, String mobile, String nic, String address, String subName1, String subGrade1, String subName2, String subGrade2, String subName3, String subGrade3, String engGrade, String islandRank, String zScore, String facultyId, String courseId, String password) {
 
-                int res;
+        int res;
         try {
             res = UndergraduateStudentController.addUnderStudent(undergraduateStudentModel);
             if (res > 0) {
-            JOptionPane.showMessageDialog(this, "Added Success");
-        }
+                JOptionPane.showMessageDialog(this, "Added Success");
+            }
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(UndergraduateStudent.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(UndergraduateStudenttex.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
-           // Logger.getLogger(UndergraduateStudent.class.getName()).log(Level.SEVERE, null, ex);
+            // Logger.getLogger(UndergraduateStudent.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(this, "Database mismatch");
+            System.out.print(ex);
         }
-     
     }//GEN-LAST:event_underSubmitbtnActionPerformed
 
     private void postSubmitbtnpostbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_postSubmitbtnpostbtnActionPerformed

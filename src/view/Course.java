@@ -72,10 +72,10 @@ public class Course extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setText("Course Name");
-        jPanel7.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, -1, -1));
+        jPanel7.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel3.setText("Course Id");
+        jLabel3.setText("Course Code");
         jPanel7.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -87,15 +87,15 @@ public class Course extends javax.swing.JFrame {
                 courseNametxtActionPerformed(evt);
             }
         });
-        jPanel7.add(courseNametxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 100, -1));
+        jPanel7.add(courseNametxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 490, -1));
 
         courseIdtxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 courseIdtxtActionPerformed(evt);
             }
         });
-        jPanel7.add(courseIdtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 50, 100, -1));
-        jPanel7.add(courseCodinatertxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, 100, -1));
+        jPanel7.add(courseIdtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 50, 490, -1));
+        jPanel7.add(courseCodinatertxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, 490, -1));
 
         submitbtn.setBackground(new java.awt.Color(49, 144, 176));
         submitbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -120,7 +120,7 @@ public class Course extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setText("Semester Fees");
         jPanel7.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, -1));
-        jPanel7.add(semesterFeestxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, 100, -1));
+        jPanel7.add(semesterFeestxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, 490, -1));
 
         cancelbtn.setBackground(new java.awt.Color(49, 144, 176));
         cancelbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -150,7 +150,7 @@ public class Course extends javax.swing.JFrame {
                 searchbtnActionPerformed(evt);
             }
         });
-        jPanel7.add(searchbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 50, 100, -1));
+        jPanel7.add(searchbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 50, 100, -1));
 
         datetebtn.setBackground(new java.awt.Color(49, 144, 176));
         datetebtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -267,8 +267,8 @@ public class Course extends javax.swing.JFrame {
         String courseId=courseIdtxt.getText();
         String courseCodinater=courseCodinatertxt.getText();
         double semesterFees = Double.parseDouble(semesterFeestxt.getText());
-        System.out.println(courseName+courseId+courseCodinater );
-        System.out.println(semesterFees);
+        //System.out.println(courseName+courseId+courseCodinater );
+        //System.out.println(semesterFees);
         
         CourseModel course=new CourseModel(courseName,courseId,courseCodinater,semesterFees);
        
@@ -283,6 +283,9 @@ public class Course extends javax.swing.JFrame {
             Logger.getLogger(Course.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
             Logger.getLogger(Course.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        catch (Exception e){
+            JOptionPane.showMessageDialog(this, "Update unsuccess");
         }
         
         

@@ -65,7 +65,7 @@ public class PostgraduateStudentResult extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(141, 199, 63));
 
         jPanel7.setBackground(new java.awt.Color(141, 199, 63));
-        jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Postgraduatestudent Result\n", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 18), new java.awt.Color(25, 88, 157))); // NOI18N
+        jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Postgraduate Student Result ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 18), new java.awt.Color(25, 88, 157))); // NOI18N
         jPanel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
